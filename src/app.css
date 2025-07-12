@@ -66,6 +66,10 @@
 
 body {
 	@apply bg-based text-neutral;
+
+	::selection {
+		background: var(--color-selection-background)
+	}
 }
 
 article {
@@ -73,6 +77,10 @@ article {
 
 	& a {
 		@apply text-link underline;
+	}
+
+	& a:hover {
+		@apply text-mocha-peach
 	}
 
 	& a,

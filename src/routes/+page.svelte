@@ -10,7 +10,9 @@
 <article>
 	<About />
 
-	<footer>
-		<span>{formatDate(metadata.createdAt)}</span>
-	</footer>
+	{#if metadata.publishedAt}
+		<footer>
+			<span>{formatDate(metadata.publishedAt)}</span>
+		</footer>
+	{/if}
 </article>

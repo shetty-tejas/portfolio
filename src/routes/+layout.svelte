@@ -32,8 +32,8 @@
 			href: '/'
 		},
 		{
-			label: 'Blogs',
-			href: '/blogs'
+			label: 'Writings',
+			href: '/writings'
 		},
 		{
 			label: 'Chapters',
@@ -91,7 +91,7 @@
 					>
 				</div>
 
-				<nav class="flex md:flex-col gap-x-6 gap-y-1.5 font-light text-sm">
+				<nav class="flex md:flex-col gap-x-6 gap-y-1.5 font-light text-xs md:text-sm">
 					{#each navLinks as link (link.href)}
 						{@const isActive = isNavLinkActive(link)}
 

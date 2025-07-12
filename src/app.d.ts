@@ -10,10 +10,16 @@ declare global {
 			export const metadata: ContentMetadata;
 		}
 
+		type MarkdownModule = typeof import('*.md');
+
 		interface ContentMetadata {
+			slug: string;
 			title: string;
-			createdAt: string;
+
+			description?: string;
+			publishedAt?: string;
 		}
+
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}

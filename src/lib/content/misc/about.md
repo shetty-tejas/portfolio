@@ -1,6 +1,9 @@
 ---
+slug: misc/about
 title: Hey! 👋🏾
-createdAt: 2025/07/12
+
+description: Here’s a little something about me!
+publishedAt: 2025/07/11
 ---
 
 ## {title}
