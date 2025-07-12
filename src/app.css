@@ -67,3 +67,32 @@
 body {
 	@apply bg-based text-neutral;
 }
+
+article {
+	@apply space-y-4 leading-relaxed font-light tracking-wide;
+
+	& a {
+		@apply text-link underline;
+	}
+
+	& a,
+	strong {
+		@apply font-medium;
+	}
+
+	& h1 {
+		@apply text-2xl font-bold md:text-3xl;
+	}
+
+	& h2 {
+		@apply text-xl font-semibold md:text-2xl;
+	}
+
+	& h3 {
+		@apply text-lg font-medium md:text-xl;
+	}
+
+	& footer {
+		@apply text-subtle mt-12 flex w-full justify-end text-sm;
+	}
+}

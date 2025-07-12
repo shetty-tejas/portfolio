@@ -1,5 +1,5 @@
 <script module>
-	import '../app.css';
+	import '$lib/../app.css';
 </script>
 
 <script lang="ts">
@@ -78,7 +78,7 @@
 	}
 </script>
 
-<div class="max-w-5xl mx-4 lg:mx-auto mb-8 md:mb-40 mt-8 md:mt-20 lg:mt-40">
+<div class="max-w-4xl mx-8 lg:mx-auto mb-8 md:mb-40 mt-8 md:mt-20 lg:mt-40">
 	<div class="flex flex-col md:flex-row gap-y-4">
 		<div class="space-y-3">
 			<aside class="min-w-50 font-decor space-y-4 md:space-y-8 md:sticky md:top-24 select-none">

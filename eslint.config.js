@@ -27,10 +27,10 @@ export default ts.config(
 		}
 	},
 	{
-		files: ['**/*.svx', '**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
+		files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
 		languageOptions: {
 			parserOptions: {
-				extraFileExtensions: ['.svelte', '.svx'],
+				extraFileExtensions: ['.svelte'],
 				parser: ts.parser,
 				svelteConfig
 			}
