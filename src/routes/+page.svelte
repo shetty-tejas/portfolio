@@ -1,18 +1,15 @@
 <script lang="ts">
+	import { Header } from '$lib/components/writeup';
+	import Footer from '$lib/components/writeup/footer.svelte';
 	import About, { metadata } from '$lib/content/misc/about.md';
-	import { formatDate } from '$lib/utils';
+
+	const { title, description, publishedAt } = metadata;
 </script>
 
-<svelte:head>
-	<title>{metadata.title}</title>
-</svelte:head>
-
 <article>
+	<Header {title} {description} />
+
 	<About />
 
-	{#if metadata.publishedAt}
-		<footer>
-			<span>{formatDate(metadata.publishedAt)}</span>
-		</footer>
-	{/if}
+	<Footer {publishedAt} />
 </article>

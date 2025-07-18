@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Header } from '$lib/components/writeup';
 	import { formatDate } from '$lib/utils';
 	import type { PageData } from './$types';
 
@@ -8,15 +9,14 @@
 
 	let { data }: Props = $props();
 
-	const title = 'Writings ✍🏾';
+	const title = 'My Writings ✍🏾';
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-</svelte:head>
-
 <article>
-	<h2>{title}</h2>
+	<Header
+		{title}
+		description="Things I’ve written on engineering, philosophy, and life in general."
+	/>
 
 	<div class="mt-8">
 		{#each data.articles as article (article.slug)}

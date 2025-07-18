@@ -1,12 +1,10 @@
 ---
 slug: misc/about
-title: Hey! 👋🏾
+title: Hey, it's Tejas! 👋🏾
 
-description: Here’s a little something about me!
+description: Here's a little something about me!
 publishedAt: 2025/07/11
 ---
-
-## {title}
 
 I'm a developer based in Mumbai, India. I currently work at [Sage](https://www.sage.com) as a **Senior Engineer**,
 where I’m part of the team building [Sage Network](https://www.sage.com/en-us/sage-network/) and the [Sage E-Invoicing Portal](https://network.sage.com/e-invoicing/register).

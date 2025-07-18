@@ -68,7 +68,7 @@ body {
 	@apply bg-based text-neutral;
 
 	::selection {
-		background: var(--color-selection-background)
+		background: var(--color-selection-background);
 	}
 }
 
@@ -80,7 +80,7 @@ article {
 	}
 
 	& a:hover {
-		@apply text-mocha-peach
+		@apply text-mocha-peach;
 	}
 
 	& a,

@@ -78,7 +78,7 @@
 	}
 </script>
 
-<div class="max-w-4xl mx-8 lg:mx-auto mb-8 md:mb-40 mt-8 md:mt-20 lg:mt-40">
+<div class="max-w-4xl mx-8 lg:mx-auto mb-8 md:mb-20 mt-8 md:mt-20 lg:mt-40">
 	<div class="flex flex-col md:flex-row gap-y-4">
 		<div class="space-y-3">
 			<aside class="min-w-50 font-decor space-y-4 md:space-y-8 md:sticky md:top-24 select-none">
@@ -91,7 +91,7 @@
 					>
 				</div>
 
-				<nav class="flex md:flex-col gap-x-6 gap-y-1.5 font-light text-xs md:text-sm">
+				<nav class="flex md:flex-col gap-x-4 gap-y-1.5 font-light text-xs md:text-sm">
 					{#each navLinks as link (link.href)}
 						{@const isActive = isNavLinkActive(link)}
 

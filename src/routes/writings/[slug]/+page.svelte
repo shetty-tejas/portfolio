@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils';
+	import { Header } from '$lib/components/writeup';
+	import Footer from '$lib/components/writeup/footer.svelte';
 	import type { PageData } from './$types';
 
 	interface Props {
@@ -7,19 +8,15 @@
 	}
 
 	let { data }: Props = $props();
+
+	const { title, description, publishedAt } = data.metadata;
 </script>
 
-<svelte:head>
-	<title>{data.metadata.title}</title>
-</svelte:head>
-
 <article>
+	<Header {title} {description} />
+
 	<!-- eslint-disable-next-line svelte/no-at-html-tags : This is known, and the input that would be received would be from the markdown files only. -->
 	{@html data.html}
 
-	{#if data.metadata.publishedAt}
-		<footer>
-			<span>{formatDate(data.metadata.publishedAt)}</span>
-		</footer>
-	{/if}
+	<Footer {publishedAt} />
 </article>
