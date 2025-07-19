@@ -2,17 +2,7 @@
 // for information about these interfaces
 declare global {
 	namespace App {
-		declare module '*.md' {
-			import type { SvelteComponent } from 'svelte';
-
-			export default class Comp extends SvelteComponent {}
-
-			export const metadata: ContentMetadata;
-		}
-
-		type MarkdownModule = typeof import('*.md');
-
-		interface ContentMetadata {
+		interface Frontmatter {
 			slug: string;
 			title: string;
 
@@ -20,7 +10,20 @@ declare global {
 			publishedAt?: string;
 		}
 
-		// interface Error {}
+		module '*.md' {
+			import type { SvelteComponent } from 'svelte';
+
+			export default class Comp extends SvelteComponent {}
+
+			export const metadata: Frontmatter;
+		}
+
+		type MarkdownComponent = typeof import('*.md');
+
+		interface Error {
+			code: 'NOT_FOUND';
+		}
+
 		// interface Locals {}
 		// interface PageData {}
 		// interface PageState {}

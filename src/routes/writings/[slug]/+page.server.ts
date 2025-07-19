@@ -2,13 +2,16 @@ import { error, type ServerLoadEvent } from '@sveltejs/kit';
 import { render } from 'svelte/server';
 
 import type { PageServerLoad } from './$types';
-import { loadMarkdownFile } from '$lib/server_utils';
+import { fetchMarkdownComponent } from '$lib/server_utils';
 
 export const load: PageServerLoad = async ({ params }: ServerLoadEvent) => {
 	const slug = params.slug || '';
 
 	try {
-		const module: App.MarkdownModule | undefined = await loadMarkdownFile('writings', slug);
+		const module: App.MarkdownComponent | undefined = await fetchMarkdownComponent(
+			'writings',
+			slug
+		);
 		if (!module) throw new Error();
 
 		const rendered = render(module.default);
@@ -18,6 +21,9 @@ export const load: PageServerLoad = async ({ params }: ServerLoadEvent) => {
 			metadata: module.metadata
 		};
 	} catch {
-		error(404, 'Writing not found!');
+		error(404, {
+			code: 'NOT_FOUND',
+			message: 'Page Not Found'
+		});
 	}
 };

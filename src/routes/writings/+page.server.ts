@@ -1,10 +1,10 @@
-import { loadMarkdownFiles } from '$lib/server_utils';
+import { listMarkdownComponents } from '$lib/server_utils';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async (): Promise<{ articles: Array<App.ContentMetadata> }> => {
-	const markdownModules: Array<App.MarkdownModule> = await loadMarkdownFiles('writings');
+export const load: PageServerLoad = async (): Promise<{ articles: Array<App.Frontmatter> }> => {
+	const markdownModules: Array<App.MarkdownComponent> = await listMarkdownComponents('writings');
 
 	return {
-		articles: markdownModules.map((m): App.ContentMetadata => m.metadata)
+		articles: markdownModules.map((m): App.Frontmatter => m.metadata)
 	};
 };

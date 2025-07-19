@@ -7,10 +7,10 @@ function normaliseFileName(file: string): string {
 	return file;
 }
 
-export async function loadMarkdownFile(
+export async function fetchMarkdownComponent(
 	directory: string,
 	file: string
-): Promise<App.MarkdownModule | undefined> {
+): Promise<App.MarkdownComponent | undefined> {
 	try {
 		return await import(`./content/${directory}/${file}.md`);
 	} catch (error) {
@@ -18,15 +18,17 @@ export async function loadMarkdownFile(
 	}
 }
 
-export async function loadMarkdownFiles(directory: string): Promise<Array<App.MarkdownModule>> {
+export async function listMarkdownComponents(
+	directory: string
+): Promise<Array<App.MarkdownComponent>> {
 	try {
 		const fileNames: string[] = await readdir(
 			join(process.cwd(), 'src', 'lib', 'content', directory)
 		);
 		const markdownFiles: string[] = fileNames.map((f) => normaliseFileName(f));
 
-		const promises: Array<Promise<App.MarkdownModule | undefined>> = markdownFiles.map(
-			async (f: string): Promise<App.MarkdownModule | undefined> => {
+		const promises: Array<Promise<App.MarkdownComponent | undefined>> = markdownFiles.map(
+			async (f: string): Promise<App.MarkdownComponent | undefined> => {
 				try {
 					return await import(`./content/${directory}/${f}.md`);
 				} catch (error) {
@@ -35,9 +37,9 @@ export async function loadMarkdownFiles(directory: string): Promise<Array<App.Ma
 			}
 		);
 
-		const modules: Array<App.MarkdownModule> = (await Promise.all(promises))
-			.filter((m: App.MarkdownModule | undefined) => !!m)
-			.filter((m: App.MarkdownModule) => (m.metadata.publishedAt || '')?.length > 0)
+		const modules: Array<App.MarkdownComponent> = (await Promise.all(promises))
+			.filter((m: App.MarkdownComponent | undefined) => !!m)
+			.filter((m: App.MarkdownComponent) => (m.metadata.publishedAt || '')?.length > 0)
 			.sort((a, b) => ((a.metadata.publishedAt || '') > (b.metadata.publishedAt || '') ? -1 : 1));
 
 		return modules;
