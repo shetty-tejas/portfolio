@@ -36,12 +36,12 @@
 			href: '/writings'
 		},
 		{
-			label: 'Chapters',
-			href: '/chapters'
+			label: 'Series',
+			href: '/series'
 		},
 		{
-			label: 'Contact',
-			href: '/contact'
+			label: 'Resume',
+			href: '/resume'
 		}
 	];
 
@@ -109,7 +109,7 @@
 				</nav>
 			</aside>
 
-			<div class="border-t border-surface-lighter md:hidden"></div>
+			<div class="border-t border-surface-light md:hidden"></div>
 		</div>
 
 		<div class="flex-1 flex flex-col gap-y-16 pt-2">
