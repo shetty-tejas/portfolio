@@ -21,9 +21,7 @@
 	{#if data.articles.length === 0}
 		<div class="mt-8 space-y-1">
 			<div class="text-2xl">:(</div>
-			<div class="text-sm">
-				Nothing to display yet.
-			</div>
+			<div class="text-sm">Nothing to display yet.</div>
 		</div>
 	{:else}
 		<div class="mt-8 space-y-6">
@@ -40,7 +38,7 @@
 						</span>
 					</div>
 
-					<div class="border-t border-surface group-last:hidden"></div>
+					<hr />
 				</div>
 			{/each}
 		</div>

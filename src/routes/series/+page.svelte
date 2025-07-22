@@ -38,7 +38,7 @@
 						</span>
 					</div>
 
-					<div class="border-t border-surface group-last:hidden"></div>
+					<hr />
 				</div>
 			{/each}
 		</div>

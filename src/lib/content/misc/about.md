@@ -7,7 +7,7 @@ publishedAt: 2025/07/11
 ---
 
 I'm a developer based in Mumbai, India. I currently work at [Sage](https://www.sage.com) as a **Senior Engineer**,
-where I’m part of the team building [Sage Network](https://www.sage.com/en-us/sage-network/) and the [Sage E-Invoicing Portal](https://network.sage.com/e-invoicing/register).
+where I’m part of the team building [Sage Network](https://www.sage.com/en-us/sage-network/) and the [Sage E-Invoicing Portal](https://www.sage.com/en-gb/sage-network/e-invoicing/).
 
 After hours, I like to tinker with ideas and build things I enjoy.
 Lately, that means working on a few SaaS products using **Ruby on Rails** and **SvelteKit**,

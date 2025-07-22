@@ -109,7 +109,7 @@
 				</nav>
 			</aside>
 
-			<div class="border-t border-surface-light md:hidden"></div>
+			<hr class="border-t border-surface-light md:hidden" />
 		</div>
 
 		<div class="flex-1 flex flex-col gap-y-16 pt-2">
