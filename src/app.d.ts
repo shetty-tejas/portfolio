@@ -3,11 +3,9 @@
 declare global {
 	namespace App {
 		interface Frontmatter {
-			slug: string;
 			title: string;
-
-			description?: string;
-			publishedAt?: string;
+			description: string;
+			publishedAt: string;
 		}
 
 		module '*.md' {

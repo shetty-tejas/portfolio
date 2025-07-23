@@ -1,7 +1,5 @@
 ---
-slug: misc/resume
 title: Wanna know me more? 🤓
-
 description: I build software that works, explore ideas that don’t (yet), and enjoy the journey in between.
 publishedAt: 2025/07/22
 ---
@@ -21,15 +19,15 @@ I care deeply about building products that are not just technically sound, but a
 - **Frameworks:** Rails, SvelteKit, ReactJS
 - **DBMS:** PostgreSQL, Redis, MySQL, SQLite
 - **Tools:** Docker, Azure, AWS, DigitalOcean, Git
-- **AI Tools:** Claude and Ollama + AnythingLLM
+- **AI Tools:** Claude Code and Ollama + AnythingLLM
 
 ---
 
 <h2 class="text-mocha-peach">Professional Experience</h2>
 
-<div class="space-y-1">
+<div class="space-y-0.5">
   <h3>Senior Software Engineer @ Sage</h3>
-  <p class="text-subtle text-sm italic">Remote | May 2022 – Present</p>
+  <p class="text-subtle text-sm">Remote | May 2022 – Present</p>
 </div>
 
 - Contributed to [Lockstep Inbox](https://www.prnewswire.com/news-releases/lockstep-announces-worlds-first-smart-inbox-designed-for-accounting-teams-301549995.html), improving **Gmail/Outlook mail integrations** and building **REST APIs** used by 2,500+ MAUs.
@@ -40,9 +38,9 @@ I care deeply about building products that are not just technically sound, but a
   - [E-Invoicing Portal](https://www.sage.com/en-gb/sage-network/e-invoicing/): Registration system for French PPF e-invoicing compliance.
 - Led bug triage, code reviews, and onboarding, while driving refactors that **improved performance** and **maintainability**.
 
-<div class="space-y-1 !mt-5">
+<div class="space-y-0.5">
   <h3>Software Engineer @ Capgemini</h3>
-  <p class="text-subtle text-sm italic">Remote | October 2020 – April 2022</p>
+  <p class="text-subtle text-sm">Remote | October 2020 – April 2022</p>
 </div>
 
 - **Strengthened security** for "BNP Paribas Cardif", by rapidly identifying and patching critical vulnerabilities.
@@ -54,14 +52,14 @@ I care deeply about building products that are not just technically sound, but a
 
 <h2 class="text-mocha-peach">Education</h2>
 
-<div class="space-y-1">
+<div class="space-y-0.5">
   <h3>Master Of Computer Applications</h3>
-  <p class="text-subtle text-sm italic">University of Mysore, Mysuru | July 2021 – March 2024 | 8.45 CGPA</p>
+  <p class="text-subtle text-sm">University of Mysore, Mysuru | July 2021 – March 2024 | 8.45 CGPA</p>
 </div>
 
-<div class="space-y-1 !mt-5">
+<div class="space-y-0.5">
   <h3>Bachelor of Science in Computer Science</h3>
-  <p class="text-subtle text-sm italic">B. K. Birla College, Kalyan | June 2017 – April 2020 | 9.16 CGPA</p>
+  <p class="text-subtle text-sm">B. K. Birla College, Kalyan | June 2017 – April 2020 | 9.16 CGPA</p>
 </div>
 
 ---

@@ -73,7 +73,7 @@ body {
 }
 
 article {
-	@apply space-y-4 leading-relaxed font-light tracking-wide;
+	@apply space-y-5 leading-relaxed font-light tracking-wide;
 
 	& a {
 		@apply text-link underline;
@@ -97,21 +97,25 @@ article {
 	}
 
 	& h3 {
-		@apply text-lg font-medium md:text-xl;
+		@apply text-lg font-semibold md:text-xl;
 	}
 
 	& ul {
-		& > li {
-			@apply leading-relaxed;
+		@apply -mt-2.5;
 
+		& > li {
 			&::before {
 				content: '>';
 
 				@apply text-mocha-peach mr-1.25 font-bold;
 			}
 
-			& ul > li::before {
-				@apply ml-4;
+			& ul {
+				@apply mt-0;
+
+				& > li::before {
+					@apply ml-4.5;
+				}
 			}
 		}
 	}

@@ -1,7 +1,5 @@
 ---
-slug: writings/hello-world
 title: Hello, World! 🚀
-
 description: Welcoming my little portfolio to the world.
 publishedAt: 2025/07/21
 ---

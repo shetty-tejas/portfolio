@@ -2,14 +2,12 @@
 	import { formatDate } from '$lib/utils';
 
 	interface Props {
-		publishedAt?: string;
+		publishedAt: string;
 	}
 
 	const { publishedAt }: Props = $props();
 </script>
 
-{#if publishedAt}
-	<footer>
-		<span>{formatDate(publishedAt)}</span>
-	</footer>
-{/if}
+<footer>
+	<span>{formatDate(publishedAt)}</span>
+</footer>

@@ -1,7 +1,5 @@
 ---
-slug: misc/about
 title: Hey, it's Tejas! 👋🏾
-
 description: Here's a little something about me!
 publishedAt: 2025/07/11
 ---

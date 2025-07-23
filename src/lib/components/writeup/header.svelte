@@ -3,7 +3,7 @@
 
 	interface Props {
 		title: string;
-		description?: string;
+		description: string;
 		class?: string;
 	}
 
@@ -16,8 +16,5 @@
 
 <div class={cn('space-y-1 !mb-8', cls)}>
 	<h2>{title}</h2>
-
-	{#if description}
-		<p class="text-subtle text-sm">{description}</p>
-	{/if}
+	<p class="text-subtle text-sm">{description}</p>
 </div>
