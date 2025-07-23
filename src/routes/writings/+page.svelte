@@ -24,14 +24,14 @@
 				{@const metadata = writing.component.metadata}
 
 				<div class="space-y-2.5 group">
-					<div class="flex flex-col md:flex-row md:justify-between">
+					<div class="flex flex-col md:flex-row md:justify-between gap-y-0.5">
 						<div class="space-y-1 flex-1">
 							<a href="writings/{writing.route}" class="!no-underline"><h3>{metadata.title}</h3></a>
 							<p>{metadata.description}</p>
 						</div>
 
-						<span class="text-right md:w-fit text-subtle text-sm">
-							{formatDate(metadata.publishedAt || '')}
+						<span class="md:mt-1 text-right md:w-fit text-subtle text-xs md:text-sm">
+							{formatDate(metadata.publishedAt || '', false)}
 						</span>
 					</div>
 
