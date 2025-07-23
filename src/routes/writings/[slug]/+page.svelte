@@ -1,22 +1,21 @@
 <script lang="ts">
+	import type { PageProps } from './$types';
+
+	import { writings, alwaysGetRoute } from '$lib/content/routes';
 	import { Header } from '$lib/components/writeup';
 	import Footer from '$lib/components/writeup/footer.svelte';
-	import type { PageData } from './$types';
 
-	interface Props {
-		data: PageData;
-	}
+	let { data }: PageProps = $props();
 
-	let { data }: Props = $props();
+	const writing = alwaysGetRoute(data.slug, writings);
 
-	const { title, description, publishedAt } = data.metadata;
+	const { title, description, publishedAt } = writing.component.metadata;
 </script>
 
 <article>
 	<Header {title} {description} />
 
-	<!-- eslint-disable-next-line svelte/no-at-html-tags : This is expected as the html would be rendered from Markdown Files dynamically. -->
-	{@html data.html}
+	<writing.component.default />
 
 	<Footer {publishedAt} />
 </article>
