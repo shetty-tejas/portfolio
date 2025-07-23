@@ -10,7 +10,7 @@
 <article>
 	<Header
 		{title}
-		description="Things I’ve written on engineering, philosophy, and life in general."
+		description="Things I’ve written on engineering, philosophy, and life."
 	/>
 
 	{#if writings.length === 0}
