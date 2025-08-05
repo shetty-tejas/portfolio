@@ -2,10 +2,17 @@
 // for information about these interfaces
 declare global {
 	namespace App {
+		interface Chapter {
+			name: string;
+			url: string;
+		}
+
 		interface Frontmatter {
 			title: string;
 			description: string;
 			publishedAt: string;
+
+			chapter?: Chapter;
 		}
 
 		module '*.md' {

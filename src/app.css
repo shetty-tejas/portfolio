@@ -103,25 +103,35 @@ article {
 	& ul {
 		@apply -mt-2.5;
 
-		& > li {
-			&::before {
-				content: '>';
+		& > li::before {
+			content: '>';
 
-				@apply text-mocha-peach mr-1.25 font-bold;
+			@apply text-mocha-peach mr-1.25 font-bold tracking-tighter;
+		}
+
+		& > li > ul {
+			/* Second Depth */
+			@apply mt-0;
+
+			& > li::before {
+				@apply ml-4.5;
 			}
+		}
 
-			& ul {
-				@apply mt-0;
-
-				& > li::before {
-					@apply ml-4.5;
-				}
+		& > li > ul > li > ul {
+			/* Third Depth */
+			& > li::before {
+				@apply ml-9;
 			}
 		}
 	}
 
 	& hr {
 		@apply border-surface border-t group-last:hidden;
+	}
+
+	& nav {
+		@apply space-y-3.5 mb-8;
 	}
 
 	& footer {

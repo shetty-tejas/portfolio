@@ -15,6 +15,6 @@
 </svelte:head>
 
 <div class={cn('space-y-1 !mb-8', cls)}>
-	<h2>{title}</h2>
+	<h1>{title}</h1>
 	<p class="text-subtle text-sm">{description}</p>
 </div>
