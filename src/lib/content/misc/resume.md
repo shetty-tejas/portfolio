@@ -13,7 +13,7 @@ I care deeply about building products that are not just technically sound, but a
 
 ---
 
-<h2 class="text-mocha-peach">Skills</h2>
+## Skills
 
 - **Languages:** Ruby, JavaScript, TypeScript, Go, Scheme
 - **Frameworks:** Rails, SvelteKit, ReactJS
@@ -23,7 +23,7 @@ I care deeply about building products that are not just technically sound, but a
 
 ---
 
-<h2 class="text-mocha-peach">Professional Experience</h2>
+## Professional Experience
 
 <div class="space-y-0.5">
   <h3>Senior Software Engineer @ Sage</h3>
@@ -50,7 +50,7 @@ I care deeply about building products that are not just technically sound, but a
 
 ---
 
-<h2 class="text-mocha-peach">Education</h2>
+## Education
 
 <div class="space-y-0.5">
   <h3>Master Of Computer Applications</h3>
@@ -64,7 +64,7 @@ I care deeply about building products that are not just technically sound, but a
 
 ---
 
-<h2 class="text-mocha-peach">Recognitions</h2>
+## Recognitions
 
 - Won **2nd place** for building [IntelliMail](https://github.com/shetty-tejas/intelli-mail), a smart Sage Network assistant, with my team in the inaugural **Sage India Hackathon**, held in **July 2025**.
 - Published a research paper titled [Human-Machine Communication using Natural Languages](https://ijesc.org/upload/42a635e4eedd8dec9bf45498688096eb.Human%20-%20Machine%20Communication%20using%20Natural%20Languages.pdf) in the International Journal of Engineering Science and Computing, November 2019.

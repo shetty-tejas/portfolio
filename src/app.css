@@ -73,7 +73,7 @@ body {
 }
 
 article {
-	@apply space-y-5 leading-relaxed font-light tracking-wide;
+	@apply space-y-5 leading-[1.7] font-light tracking-wide;
 
 	& a {
 		@apply text-link underline;
@@ -93,7 +93,7 @@ article {
 	}
 
 	& h2 {
-		@apply text-xl font-semibold md:text-2xl;
+		@apply text-mocha-peach text-xl font-semibold md:text-2xl;
 	}
 
 	& h3 {
@@ -131,7 +131,15 @@ article {
 	}
 
 	& nav {
-		@apply space-y-3.5 mb-8;
+		@apply mb-8 space-y-4 bg-based-dark border border-mocha-peach p-5 rounded-lg select-none;
+
+		& > h4 {
+			@apply text-base font-semibold md:text-lg;
+		}
+
+		& > ul > li {
+			@apply leading-loose
+		}
 	}
 
 	& footer {

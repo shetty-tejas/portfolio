@@ -26,7 +26,7 @@ const config = {
 			],
 			rehypePlugins: [
 				rehypeSlug,
-				[rehypeWS, { selector: 'h3#contents', wrapper: 'nav' }]
+				[rehypeWS, { selector: 'h4#table-of-contents', wrapper: 'nav' }]
 			]
 		})
 	],

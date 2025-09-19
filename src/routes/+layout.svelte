@@ -78,7 +78,7 @@
 	}
 </script>
 
-<div class="max-w-4xl mx-8 lg:mx-auto mb-8 md:mb-20 mt-8 md:mt-20 lg:mt-40">
+<div class="max-w-4xl xl:max-w-5xl mx-8 lg:mx-auto mb-10 mt-8 md:mt-20 lg:mt-40">
 	<div class="flex flex-col md:flex-row gap-y-4">
 		<div class="space-y-3">
 			<aside class="min-w-50 font-decor space-y-4 md:space-y-8 md:sticky md:top-24 select-none">
@@ -121,7 +121,7 @@
 				{@render children()}
 			</main>
 
-			<footer class="flex justify-between mt-8 md:mt-28 select-none">
+			<footer class="flex justify-between mt-8 md:mt-24 select-none">
 				<span class="flex items-center gap-x-1 text-sm text-subtle">
 					<CopyrightIcon size="16" />
 					{new Date().getFullYear()} Tejas Shetty.
