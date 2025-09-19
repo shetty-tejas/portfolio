@@ -131,7 +131,7 @@ article {
 	}
 
 	& nav {
-		@apply mb-8 space-y-4 bg-based-dark border border-mocha-peach p-5 rounded-lg select-none;
+		@apply mb-8 space-y-4 bg-based-dark border-2 border-mocha-peach p-5 rounded-xl select-none;
 
 		& > h4 {
 			@apply text-base font-semibold md:text-lg;
