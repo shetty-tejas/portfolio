@@ -1,5 +1,9 @@
 Aleo
+BNP
+Cardif
+Catppuccin
 Hashimoto
-MDSVEX
 IntelliMail
+MDSVEX
 PPF
+Paribas

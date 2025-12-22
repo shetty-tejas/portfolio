@@ -31,7 +31,7 @@ Furthermore, it supports Server Side Rendering out of the box, which was somethi
 due to the nature of this website.
 
 MDSVEX is a Markdown Processor built for integrating with SvelteKit.
-All the write-ups, including the homepage, are written in markdown, and in certain locations, with some injected Svelte code for additional styling.
+All the write-ups, including the homepage, are written in Markdown, and in certain locations, with some injected Svelte code for additional styling.
 
 Frameworks aside, I opted for [TailwindCSS](https://tailwindcss.com/) for styling, as it significantly enhances productivity, and for a
 smaller project like this, it made perfect sense.
