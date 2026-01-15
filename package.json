@@ -35,7 +35,7 @@
 		"rehype-wrap-sibling": "^1.0.4",
 		"remark-gfm": "^4.0.1",
 		"remark-toc": "^9.0.0",
-		"svelte": "^5.0.0",
+		"svelte": "^5.46.4",
 		"svelte-check": "^4.0.0",
 		"tailwindcss": "^4.0.0",
 		"typescript": "^5.0.0",
