@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Aleo:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Aleo:wght@100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 @import 'tailwindcss';
 
 @plugin "@tailwindcss/typography";
@@ -6,6 +6,7 @@
 @theme {
 	--color-*: initial;
 
+	/* Catppuccin Mocha (Dark) */
 	--color-mocha-rosewater: #f5e0dc;
 	--color-mocha-flamingo: #f2cdcd;
 	--color-mocha-pink: #f5c2e7;
@@ -33,116 +34,195 @@
 	--color-mocha-mantle: #181825;
 	--color-mocha-crust: #11111b;
 
+	/* Catppuccin Latte (Light) */
+	--color-latte-rosewater: #dc8a78;
+	--color-latte-flamingo: #dd7878;
+	--color-latte-pink: #ea76cb;
+	--color-latte-mauve: #8839ef;
+	--color-latte-red: #d20f39;
+	--color-latte-maroon: #e64553;
+	--color-latte-peach: #fe640b;
+	--color-latte-yellow: #df8e1d;
+	--color-latte-green: #40a02b;
+	--color-latte-teal: #179287;
+	--color-latte-sky: #04a5e5;
+	--color-latte-sapphire: #209fb5;
+	--color-latte-blue: #1e66f5;
+	--color-latte-lavender: #7287fd;
+	--color-latte-text: #4c4f69;
+	--color-latte-subtext-1: #5c5f77;
+	--color-latte-subtext-0: #6c6f85;
+	--color-latte-overlay-2: #7c7f93;
+	--color-latte-overlay-1: #8c8fa1;
+	--color-latte-overlay-0: #9ca0b0;
+	--color-latte-surface-2: #acb0be;
+	--color-latte-surface-1: #bcc0cc;
+	--color-latte-surface-0: #ccd0da;
+	--color-latte-base: #eff1f5;
+	--color-latte-mantle: #e6e9ef;
+	--color-latte-crust: #dce0e8;
+
 	--font-body: 'Aleo', 'serif';
 	--font-decor: 'Montserrat', 'sans-serif';
+	--font-mono: 'IBM Plex Mono', 'monospace';
+
+	/* Scaled-down Fluid Typography */
+	--font-size-xs: clamp(0.7rem, 0.65rem + 0.2vw, 0.8rem);
+	--font-size-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
+	--font-size-base: clamp(0.95rem, 0.9rem + 0.3vw, 1.05rem);
+	--font-size-lg: clamp(1rem, 0.95rem + 0.35vw, 1.15rem);
+	--font-size-xl: clamp(1.15rem, 1.1rem + 0.5vw, 1.35rem);
+	--font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+	--font-size-3xl: clamp(2rem, 1.8rem + 1.2vw, 2.8rem);
+
+	/* Theme Mappings */
+	--color-neutral: light-dark(var(--color-latte-text), var(--color-mocha-text));
+	--color-subtext: light-dark(var(--color-latte-subtext-0), var(--color-mocha-subtext-0));
+	--color-subtext-light: light-dark(var(--color-latte-subtext-1), var(--color-mocha-subtext-1));
+	--color-subtle: light-dark(var(--color-latte-overlay-1), var(--color-mocha-overlay-1));
+
+	--color-brand: light-dark(var(--color-latte-peach), var(--color-mocha-peach));
+	--color-link: light-dark(var(--color-latte-peach), var(--color-mocha-peach));
+	--color-success: light-dark(var(--color-latte-green), var(--color-mocha-green));
+	--color-warning: light-dark(var(--color-latte-yellow), var(--color-mocha-yellow));
+	--color-error: light-dark(var(--color-latte-red), var(--color-mocha-red));
+
+	--color-based: light-dark(var(--color-latte-base), var(--color-mocha-base));
+	--color-based-dark: light-dark(var(--color-latte-mantle), var(--color-mocha-mantle));
+	--color-based-darker: light-dark(var(--color-latte-crust), var(--color-mocha-crust));
+
+	--color-surface: light-dark(var(--color-latte-surface-0), var(--color-mocha-surface-0));
+	--color-surface-light: light-dark(var(--color-latte-surface-1), var(--color-mocha-surface-1));
+	--color-surface-lighter: light-dark(var(--color-latte-surface-2), var(--color-mocha-surface-2));
+
+	--color-overlay: light-dark(var(--color-latte-overlay-0), var(--color-mocha-overlay-0));
+	--color-overlay-light: light-dark(var(--color-latte-overlay-1), var(--color-mocha-overlay-1));
+	--color-overlay-lighter: light-dark(var(--color-latte-overlay-2), var(--color-mocha-overlay-2));
+
+	--color-cursor: light-dark(var(--color-latte-rosewater), var(--color-mocha-rosewater));
+	--color-selection-background: light-dark(
+		var(--color-latte-surface-2),
+		var(--color-mocha-surface-2)
+	);
 }
 
-@theme inline {
-	--color-neutral: var(--color-mocha-text);
-	--color-subtext: var(--color-mocha-subtext-0);
-	--color-subtext-light: var(--color-mocha-subtext-1);
-	--color-subtle: var(--color-mocha-overlay-1);
+:root {
+	color-scheme: light dark;
+}
 
-	--color-link: var(--color-mocha-blue);
-	--color-success: var(--color-mocha-green);
-	--color-warning: var(--color-mocha-yellow);
-	--color-error: var(--color-mocha-red);
+[data-theme='light'] {
+	color-scheme: light;
+}
 
-	--color-based: var(--color-mocha-base);
-	--color-based-dark: var(--color-mocha-mantle);
-	--color-based-darker: var(--color-mocha-crust);
+[data-theme='dark'] {
+	color-scheme: dark;
+}
 
-	--color-surface: var(--color-mocha-surface-0);
-	--color-surface-light: var(--color-mocha-surface-1);
-	--color-surface-lighter: var(--color-mocha-surface-2);
+/* Scoped transitions for theme switching - prioritize performance */
+body {
+	@apply transition-colors duration-300 ease-in-out;
+}
 
-	--color-overlay: var(--color-mocha-overlay-0);
-	--color-overlay-light: var(--color-mocha-overlay-1);
-	--color-overlay-lighter: var(--color-mocha-overlay-2);
+/* Global Focus Styles - Harden against keyboard navigation issues */
+:focus-visible {
+	@apply ring-brand ring-offset-based ring-2 ring-offset-2 outline-none;
+}
 
-	--color-cursor: var(--color-mocha-rosewater);
-	--color-selection-background: rgb(from var(--color-mocha-overlay-2) r g b / 0.2);
+/* Snappy transitions for interactive elements */
+a,
+button,
+span.tag,
+.index-title {
+	@apply transition-all duration-150 ease-out;
 }
 
 body {
-	@apply bg-based text-neutral;
+	@apply bg-based text-neutral font-body antialiased;
 
 	::selection {
 		background: var(--color-selection-background);
 	}
 }
 
+/* Code block styling - Delight for technical readers */
+pre {
+	@apply bg-based-dark border-overlay/20 my-8 overflow-x-auto rounded-none border p-5 font-mono text-sm leading-relaxed;
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-surface) transparent;
+}
+
+code {
+	@apply bg-surface-light/30 text-mocha-maroon rounded-none px-1 py-0.5 font-mono text-[0.9em] font-medium;
+}
+
+pre code {
+	@apply text-mocha-text bg-transparent p-0 font-normal;
+}
+
 article {
-	@apply space-y-5 leading-[1.7] font-light tracking-wide;
+	@apply space-y-5 text-base leading-[1.7] font-normal tracking-normal md:text-lg;
+
+	& span.tag {
+		@apply bg-surface-light/50 text-subtext hover:bg-surface-light hover:text-brand cursor-pointer rounded-none px-2 py-0.5 font-mono text-[10px] tracking-widest uppercase transition-colors duration-150 md:text-xs;
+	}
 
 	& a {
-		@apply text-link underline;
+		@apply text-brand decoration-brand/20 hover:decoration-brand font-medium underline underline-offset-4;
 	}
 
-	& a:hover {
-		@apply text-mocha-peach;
-	}
-
-	& a,
-	strong {
-		@apply font-medium;
+	& strong {
+		@apply text-neutral font-bold;
 	}
 
 	& h1 {
-		@apply text-2xl font-bold md:text-3xl;
+		@apply font-decor text-neutral text-3xl leading-tight font-black tracking-tight md:text-4xl;
 	}
 
 	& h2 {
-		@apply text-mocha-peach text-xl font-semibold md:text-2xl;
+		@apply font-decor text-brand border-overlay/30 mb-4 border-b pt-6 pb-2 text-xl font-bold md:text-2xl;
 	}
 
 	& h3 {
-		@apply text-lg font-semibold md:text-xl;
+		@apply font-decor text-brand pt-3 text-lg font-bold opacity-90 md:text-xl;
 	}
 
 	& ul {
-		@apply -mt-2.5;
+		@apply m-0 list-none space-y-0.5 p-0;
 
-		& > li::before {
-			content: '>';
-
-			@apply text-mocha-peach mr-1.25 font-bold tracking-tighter;
-		}
-
-		& > li > ul {
-			/* Second Depth */
-			@apply mt-0;
-
-			& > li::before {
-				@apply ml-4.5;
+		& li {
+			&::before {
+				content: '>';
+				@apply text-brand inline-block pr-2 font-mono font-bold;
 			}
 		}
 
-		& > li > ul > li > ul {
-			/* Third Depth */
-			& > li::before {
-				@apply ml-9;
-			}
+		& li > ul {
+			@apply mt-2 ml-6 indent-0;
 		}
 	}
 
 	& hr {
-		@apply border-surface border-t group-last:hidden;
+		@apply border-overlay/30 my-10 border-t group-last:hidden;
 	}
 
+	/* Table of Contents / Nav */
 	& nav {
-		@apply mb-8 space-y-4 bg-based-dark border-2 border-mocha-peach p-5 rounded-xl select-none;
+		@apply bg-based-dark border-overlay/20 mb-10 space-y-4 rounded-none border-l-4 p-5 select-none;
 
 		& > h4 {
-			@apply text-base font-semibold md:text-lg;
+			@apply font-decor text-brand mb-4! text-sm font-black tracking-widest uppercase;
 		}
 
-		& > ul > li {
-			@apply leading-loose
+		& > ul {
+			& li {
+				& a {
+					@apply text-neutral/80 hover:text-brand font-decor inline text-sm leading-tight font-bold no-underline! transition-colors duration-150 md:text-base;
+				}
+			}
 		}
 	}
 
 	& footer {
-		@apply text-subtle mt-12 flex w-full justify-end text-sm;
+		@apply text-subtle mt-16 flex w-full justify-end font-mono text-xs tracking-widest uppercase opacity-60;
 	}
 }

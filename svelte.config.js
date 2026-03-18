@@ -30,7 +30,12 @@ const config = {
 			]
 		})
 	],
-	kit: { adapter: adapter() },
+	kit: {
+		adapter: adapter(),
+		prerender: {
+			handleUnseenRoutes: 'warn'
+		}
+	},
 	extensions: ['.svelte', '.md']
 };
 

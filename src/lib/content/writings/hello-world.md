@@ -2,6 +2,10 @@
 title: Hello, World! 🚀
 description: Welcoming my little portfolio to the world.
 publishedAt: 2025/09/19
+tags:
+  - announcement
+  - engineering
+  - sveltekit
 ---
 
 #### Table Of Contents
