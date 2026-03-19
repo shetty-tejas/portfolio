@@ -1,7 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
 	<defs>
 		<style type="text/css">
-			@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700');
+			@font-face {
+				font-family: 'JetBrains Mono';
+				src: url('/brand/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype-variations');
+				font-weight: 100 900;
+				font-style: normal;
+				font-display: swap;
+			}
 		</style>
 	</defs>
 	<rect width="100" height="100" fill="#fab387" />

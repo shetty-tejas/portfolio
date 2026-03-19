@@ -33,7 +33,7 @@
 		property="og:description"
 		content="Software engineer by trade, curious by nature. Writing about building robust systems and navigating the messy process of personal growth."
 	/>
-	<meta property="og:image" content={new URL(asset('/og-logo.png'), page.url.origin).href} />
+	<meta property="og:image" content={new URL(asset('/brand/og-logo.png'), page.url.origin).href} />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:creator" content="@_shettytejas_" />
@@ -42,7 +42,7 @@
 		name="twitter:description"
 		content="Software engineer by trade, curious by nature. Writing about building robust systems and navigating the messy process of personal growth."
 	/>
-	<meta name="twitter:image" content={new URL(asset('/og-logo.png'), page.url.origin).href} />
+	<meta name="twitter:image" content={new URL(asset('/brand/og-logo.png'), page.url.origin).href} />
 </svelte:head>
 
 <div class="max-w-5xl xl:max-w-6xl mx-6 md:mx-8 lg:mx-auto mb-10 mt-8 md:mt-20 lg:mt-32">
