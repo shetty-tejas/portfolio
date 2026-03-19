@@ -4,9 +4,11 @@
 
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import { page } from '$app/state';
 	import Sidebar from '$lib/components/layout/sidebar.svelte';
 	import Header from '$lib/components/layout/header.svelte';
 	import Footer from '$lib/components/layout/footer.svelte';
+	import { asset } from '$app/paths';
 
 	interface Props {
 		children: Snippet;
@@ -19,19 +21,28 @@
 </script>
 
 <svelte:head>
-	<title>Tejas Shetty | Software Engineer</title>
+	<title>Tejas Shetty</title>
 	<meta
 		name="description"
-		content="Portfolio of Tejas Shetty, a Software Engineer based in Mumbai specializing in building scalable web applications."
+		content="Portfolio of Tejas Shetty, a Software Engineer based in Mumbai specializing in building scalable systems."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Tejas Shetty | Software Engineer" />
+	<meta property="og:url" content={page.url.href} />
+	<meta property="og:title" content="Tejas Shetty" />
 	<meta
 		property="og:description"
 		content="Software Engineer building secure, scalable, and efficient systems."
 	/>
+	<meta property="og:image" content={asset('/logo.svg')} />
+
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:creator" content="@_shettytejas_" />
+	<meta name="twitter:title" content="Tejas Shetty" />
+	<meta
+		name="twitter:description"
+		content="Software Engineer building secure, scalable, and efficient systems."
+	/>
+	<meta name="twitter:image" content={asset('/logo.svg')} />
 </svelte:head>
 
 <div class="max-w-5xl xl:max-w-6xl mx-6 md:mx-8 lg:mx-auto mb-10 mt-8 md:mt-20 lg:mt-32">

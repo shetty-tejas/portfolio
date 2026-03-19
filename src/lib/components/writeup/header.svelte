@@ -15,6 +15,9 @@
 
 <svelte:head>
 	<title>{title}</title>
+
+	<meta property="og:title" content={title} />
+	<meta name="twitter:title" content={title} />
 </svelte:head>
 
 <div class={cn('space-y-4 mb-12! pb-8 border-b-2 border-overlay/20', cls)}>
