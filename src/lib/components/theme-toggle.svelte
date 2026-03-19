@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Sun, Moon } from '@lucide/svelte';
-	import { scale } from 'svelte/transition';
 	import { theme } from '$lib/theme.svelte';
 	import { cn } from '$lib/utils';
 
@@ -15,20 +14,16 @@
 	type="button"
 	onclick={() => theme.toggle()}
 	class={cn(
-		'relative flex h-11 w-11 items-center justify-center rounded-none border border-surface bg-based hover:bg-surface-light transition-all duration-200 group shadow-[2px_2px_0_var(--color-surface)] active:shadow-none active:translate-x-[1px] active:translate-y-[1px] cursor-pointer',
+		'h-11 w-11 border border-surface bg-based hover:bg-surface-light/40 transition-all duration-300 shadow-[2px_2px_0_var(--color-surface)] hover:scale-102 active:scale-98 hover:shadow-[3px_3px_0_var(--color-surface)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] cursor-pointer',
 		cls
 	)}
 	aria-label="Toggle theme"
 >
-	<div class="flex items-center justify-center h-6 w-6 overflow-hidden pointer-events-none">
+	<div class="flex items-center justify-center inset-0">
 		{#if theme.current === 'dark'}
-			<div transition:scale={{ duration: 150, start: 0.8 }} class="flex items-center justify-center absolute inset-0">
-				<Moon size={22} class="text-brand shrink-0" />
-			</div>
+			<Moon size={24} strokeWidth={1.5} class="text-brand" />
 		{:else}
-			<div transition:scale={{ duration: 150, start: 0.8 }} class="flex items-center justify-center absolute inset-0">
-				<Sun size={22} class="text-brand shrink-0" />
-			</div>
+			<Sun size={24} strokeWidth={1.5} class="text-brand" />
 		{/if}
 	</div>
 </button>

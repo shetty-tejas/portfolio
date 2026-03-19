@@ -18,13 +18,13 @@
 		<div class="h-px w-4 bg-brand/30"></div>
 		<div class="flex items-center gap-x-2">
 			<span
-				class="font-mono text-[9px] uppercase tracking-[0.2em] text-subtext font-bold opacity-50"
+				class="font-mono text-xs uppercase tracking-[0.2em] text-subtext/50 font-bold"
 			>
 				{formatDate(metadata.publishedAt || '', false)}
 			</span>
 			{#if metadata.readingTime}
 				<span
-					class="font-mono text-[9px] uppercase tracking-[0.2em] text-subtext/40 font-bold pl-2 md:border-l md:border-overlay/20"
+					class="font-mono text-xs uppercase tracking-[0.2em] text-subtext/40 font-bold pl-2 md:border-l md:border-overlay/20"
 				>
 					{metadata.readingTime} min read
 				</span>
@@ -40,7 +40,7 @@
 				{metadata.title}
 			</h2>
 		</a>
-		<p class="text-subtext font-body leading-relaxed max-w-3xl text-sm md:text-base opacity-80">
+		<p class="text-subtext/80 font-body leading-relaxed max-w-3xl text-sm md:text-base">
 			{metadata.description}
 		</p>
 

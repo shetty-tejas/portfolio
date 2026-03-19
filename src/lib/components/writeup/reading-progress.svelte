@@ -9,6 +9,7 @@
 	const { class: cls }: Props = $props();
 
 	let progress = $state(0);
+	let animationId: number | null = null;
 
 	function updateProgress() {
 		const winScroll = document.documentElement.scrollTop;
@@ -21,18 +22,31 @@
 		}
 	}
 
+	function onScroll() {
+		if (animationId === null) {
+			animationId = window.requestAnimationFrame(() => {
+				updateProgress();
+				animationId = null;
+			});
+		}
+	}
+
 	onMount(() => {
-		window.addEventListener('scroll', updateProgress);
-		updateProgress(); // Initial check
+		updateProgress();
+		window.addEventListener('scroll', onScroll, { passive: true });
 
 		return () => {
-			window.removeEventListener('scroll', updateProgress);
+			window.removeEventListener('scroll', onScroll);
+			if (animationId !== null) window.cancelAnimationFrame(animationId);
 		};
 	});
 </script>
 
 <div
-	class={cn('fixed top-0 left-0 w-full h-1 z-50 pointer-events-none bg-overlay/10', cls)}
+	class={cn(
+		'fixed md:top-0 bottom-0 left-0 w-full h-1 z-50 pointer-events-none bg-overlay/10',
+		cls
+	)}
 	aria-hidden="true"
 >
 	<div

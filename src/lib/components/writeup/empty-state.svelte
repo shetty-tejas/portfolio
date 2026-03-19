@@ -14,7 +14,7 @@
 <div class={cn('mt-12 py-12 flex flex-col items-center text-center space-y-4', cls)}>
 	<div class="h-10 w-px bg-brand/30"></div>
 	<p
-		class="font-mono text-[10px] uppercase tracking-[0.3em] text-subtext/60 font-bold max-w-xs leading-relaxed"
+		class="font-mono text-xs uppercase tracking-[0.3em] text-subtext/60 font-bold max-w-xs leading-relaxed"
 	>
 		{message}
 	</p>
