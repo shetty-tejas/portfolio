@@ -33,6 +33,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		prerender: {
+			origin: process.env.ORIGIN,
 			handleUnseenRoutes: 'warn'
 		}
 	},

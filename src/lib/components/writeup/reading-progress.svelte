@@ -49,8 +49,5 @@
 	)}
 	aria-hidden="true"
 >
-	<div
-		class="h-full bg-brand transition-all duration-75 ease-out shadow-[0_0_8px_var(--color-brand)]"
-		style="width: {progress}%"
-	></div>
+	<div class="h-full bg-brand shadow-[0_0_8px_var(--color-brand)]" style="width: {progress}%"></div>
 </div>
