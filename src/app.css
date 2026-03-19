@@ -63,7 +63,7 @@
 
 	--font-body: 'Aleo', 'serif';
 	--font-decor: 'Montserrat', 'sans-serif';
-	--font-mono: 'IBM Plex Mono', 'monospace';
+	--font-mono: 'JetBrains Mono', 'monospace';
 
 	/* Scaled-down Fluid Typography */
 	--font-size-xs: clamp(0.7rem, 0.65rem + 0.2vw, 0.8rem);

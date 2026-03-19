@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 	import type { Pathname, ResolvedPathname } from '$app/types';
 	import { cn } from '$lib/utils';
+	import Logo from '$lib/components/layout/logo.svelte';
 
 	type NavLink = {
 		label: string;
@@ -31,11 +32,11 @@
 				href={resolve('/')}
 				class="group w-fit block transition-transform hover:scale-102 active:scale-98 active:translate-x-1 active:translate-y-1"
 			>
-				<img
-					src="/logo.svg"
-					alt="TS"
-					class="size-12 md:size-16 rounded-none border-2 border-neutral shadow-[4px_4px_0_var(--color-surface)] group-hover:shadow-[6px_6px_0_var(--color-surface)] group-active:shadow-none transition-all duration-300"
-				/>
+				<div
+					class="size-12 md:size-16 rounded-none border-2 border-neutral shadow-[4px_4px_0_var(--color-surface)] group-hover:shadow-[6px_6px_0_var(--color-surface)] group-active:shadow-none transition-all duration-300 overflow-hidden"
+				>
+					<Logo />
+				</div>
 			</a>
 			<span class="font-decor font-black text-xl tracking-tight text-neutral block leading-none">
 				Tejas Shetty
