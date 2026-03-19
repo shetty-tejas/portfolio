@@ -32,6 +32,7 @@ const config = {
 	],
 	kit: {
 		adapter: adapter(),
+		inlineStyleThreshold: 40960,
 		prerender: {
 			origin: process.env.ORIGIN,
 			handleUnseenRoutes: 'warn'
