@@ -8,6 +8,9 @@ import rehypeWS from 'rehype-wrap-sibling';
 import remarkGfm from 'remark-gfm';
 import remarkToc from 'remark-toc';
 
+import calculateReadingTime from './src/lib/plugins/reading-time.ts';
+import buildExcerpt from './src/lib/plugins/reading-time.ts';
+
 const config = {
 	preprocess: [
 		vitePreprocess(),
@@ -22,7 +25,9 @@ const config = {
 						tight: true
 					}
 				],
-				remarkGfm
+				remarkGfm,
+				calculateReadingTime,
+				buildExcerpt,
 			],
 			rehypePlugins: [
 				rehypeSlug,

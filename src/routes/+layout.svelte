@@ -36,7 +36,7 @@
 	<meta property="og:image" content={new URL(asset('/brand/og-logo.png'), page.url.origin).href} />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:creator" content="@_shettytejas_" />
+	<meta name="twitter:creator" content="@itstejas_fyi" />
 	<meta name="twitter:title" content="Tejas Shetty" />
 	<meta
 		name="twitter:description"

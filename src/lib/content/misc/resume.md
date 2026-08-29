@@ -1,7 +1,7 @@
 ---
 title: Wanna know me more? 🤓
 description: I build software that works, explore ideas that don’t (yet), and enjoy the journey in between.
-publishedAt: 2025/08/22
+publishedAt: 2025-08-22
 ---
 
 <p class="text-sm text-subtle">TL;DR? Download my resume <a href="#">here</a>.</p>
