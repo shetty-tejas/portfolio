@@ -9,7 +9,7 @@ import remarkGfm from 'remark-gfm';
 import remarkToc from 'remark-toc';
 
 import calculateReadingTime from './src/lib/plugins/reading-time.ts';
-import buildExcerpt from './src/lib/plugins/reading-time.ts';
+import buildExcerpt from './src/lib/plugins/excerpt.ts';
 
 const config = {
 	preprocess: [

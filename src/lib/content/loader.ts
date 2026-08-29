@@ -19,39 +19,41 @@ export interface Post {
 
 type PostType = 'writings' | 'series';
 
-const metadataGlobs = {
-	writings: import.meta.glob<PostMetadata>('/src/lib/content/writings/*.md', {
-		import: 'metadata',
-		eager: true
-	}),
-	series: import.meta.glob<PostMetadata>('/src/lib/content/series/*.md', {
-		import: 'metadata',
-		eager: true
-	})
+const globs = {
+	metadata: {
+		writings: import.meta.glob<PostMetadata>('/src/lib/content/writings/*.md', {
+			import: 'metadata',
+			eager: true
+		}),
+		series: import.meta.glob<PostMetadata>('/src/lib/content/series/*.md', {
+			import: 'metadata',
+			eager: true
+		})
+	},
+	components: {
+		writings: import.meta.glob<Component>('/src/lib/content/writings/*.md', {
+			import: 'default'
+		}),
+		series: import.meta.glob<Component>('/src/lib/content/series/*.md', {
+			import: 'default'
+		})
+	}
 };
 
-const componentGlobs = {
-	writings: import.meta.glob<Component>('/src/lib/content/writings/*.md', {
-		import: 'default'
-	}),
-	series: import.meta.glob<Component>('/src/lib/content/series/*.md', {
-		import: 'default'
-	})
+const posts = {
+	writings: Object.freeze(process(globs.metadata.writings)),
+	series: Object.freeze(process(globs.metadata.series))
 };
 
-// Prebuild metadata into Post[]
-const writings = process(metadataGlobs.writings);
-const series = process(metadataGlobs.series);
-
-export function get(type: PostType): Post[] {
-	return type === 'writings' ? writings : series;
+export function get(type: PostType): readonly Post[] {
+	return posts[type];
 }
 
 export async function getPostBySlug(slug: string, type: PostType): Promise<Post | undefined> {
 	const post = get(type).find((p) => p.slug === slug);
 	if (!post) return undefined;
 
-	const component = componentGlobs[type][post.path];
+	const component = globs.components[type][post.path];
 	if (!component) return undefined;
 
 	return {

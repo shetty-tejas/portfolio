@@ -16,10 +16,7 @@ export default () => {
 };
 
 const calculateReadingTime = (text: string): number => {
-	const words = text
-		.replace(/---[\s\S]*?---/, '')
-		.trim()
-		.split(/\s+/).length;
+	const words = text.trim().split(/\s+/).length;
 
 	return Math.ceil(words / WORDS_PER_MINUTE);
 };
