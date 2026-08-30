@@ -36,12 +36,11 @@
 					{description}
 				</p>
 				{#if readingTime}
-					<aside
-						aria-hidden="true"
+					<span
 						class="text-subtle font-mono text-xs tracking-wide font-semibold sm:border-l sm:border-overlay/20 sm:pl-3"
 					>
 						~{readingTime} min read
-					</aside>
+					</span>
 				{/if}
 			</div>
 		</div>

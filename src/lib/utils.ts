@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]): string {
 
 export function formatDate(dateString: string): string {
 	const date = new Date(
-		/^\d{4}-\d{2}-\d{2}$/.test(dateString) ? dateString + 'T00:00:00' : dateString
+		/^\d{4}-\d{2}-\d{2}$/.test(dateString) ? `${dateString}T00:00:00Z` : dateString
 	);
 
 	return date.toISOString().slice(0, 10).replaceAll('-', '.');

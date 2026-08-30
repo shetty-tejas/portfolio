@@ -9,9 +9,5 @@
 </script>
 
 <footer>
-	<time datetime={publishedAt}>
-		<aside aria-hidden="true">
-			{formatDate(publishedAt)}
-		</aside>
-	</time>
+	<time datetime={publishedAt}>{formatDate(publishedAt)}</time>
 </footer>

@@ -13,7 +13,7 @@ export const GET: RequestHandler = ({ url }) => {
 			return [
 				'<item>',
 				`\t<title>${esc(post.metadata.title)}</title>`,
-				`\t<link>${link}</link>`,
+				`\t<link>${esc(link)}</link>`,
 				`\t<description>${esc(post.metadata.description)}</description>`,
 				`\t<pubDate>${new Date(post.metadata.publishedAt).toUTCString()}</pubDate>`,
 				...(post.metadata.tags ?? []).map((tag) => `\t<category>${esc(tag)}</category>`),

@@ -5,7 +5,6 @@ export interface PostMetadata {
 	description: string;
 	publishedAt: string;
 	readingTime: number;
-	excerpt: string;
 
 	tags?: string[];
 }

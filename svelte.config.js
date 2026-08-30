@@ -16,8 +16,8 @@ const config = {
 			remarkPlugins: [
 				remarkGfm,
 				[remarkHeadingId, { defaults: true }],
-				[buildToc, { heading: '(table[ -]of[ -])?contents?|toc' }],
 				calculateReadingTime,
+				[buildToc, { heading: '(table[ -]of[ -])?contents?|toc' }]
 			]
 		})
 	],

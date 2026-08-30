@@ -26,14 +26,6 @@ export default function (options: TocOptions = {}): Transformer<Root> {
 				const nextNode = parent.children[index + 1];
 
 				if (nextNode && nextNode.type === 'list') {
-					const listNode = nextNode as List;
-
-					listNode.data = listNode.data || {};
-					listNode.data.hProperties = {
-						...(listNode.data.hProperties as Record<string, unknown>),
-						'aria-hidden': 'true'
-					};
-
 					const openTag: Html = {
 						type: 'html',
 						value: `<aside><details><summary>${summaryText}</summary>`
@@ -43,7 +35,7 @@ export default function (options: TocOptions = {}): Transformer<Root> {
 						value: '</details></aside>'
 					};
 
-					parent.children.splice(index, 2, openTag, listNode, closeTag);
+					parent.children.splice(index, 2, openTag, nextNode, closeTag);
 				}
 			}
 		});
