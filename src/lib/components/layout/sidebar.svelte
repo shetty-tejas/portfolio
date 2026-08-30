@@ -30,7 +30,7 @@
 		<div class="flex md:flex-col max-md:items-center gap-x-4 gap-y-6">
 			<a
 				href={resolve('/')}
-				class="group w-fit block transition-transform hover:scale-102 active:scale-98 active:translate-x-1 active:translate-y-1"
+				class="group w-fit block transition-transform hover:scale-[1.02] active:scale-[0.98] active:translate-x-1 active:translate-y-1"
 			>
 				<div
 					class="size-12 md:size-16 rounded-none border-2 border-neutral shadow-[4px_4px_0_var(--color-surface)] group-hover:shadow-[6px_6px_0_var(--color-surface)] group-active:shadow-none transition-all duration-300 overflow-hidden"
@@ -67,7 +67,7 @@
 		<a
 			href={resolve(link.href)}
 			class={cn(
-				'py-2 transition-all duration-200 uppercase tracking-widest font-bold block w-full',
+				'py-2 transition-all duration-200 uppercase tracking-wider font-bold block w-full',
 				isActive ? 'text-neutral' : 'text-subtle hover:text-neutral'
 			)}
 		>

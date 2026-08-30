@@ -27,19 +27,19 @@
 		<h1 class="leading-[1.1] tracking-tighter text-neutral font-black text-3xl md:text-4xl">
 			{title}
 		</h1>
-		<div class="flex flex-col md:flex-row md:items-center gap-x-4 gap-y-2">
-			<div class="h-px w-6 bg-brand/60 hidden md:block"></div>
-			<div class="flex flex-col md:flex-row md:items-center gap-x-3 gap-y-1">
+		<div class="flex flex-col md:flex-row md:items-center gap-x-2 gap-y-2">
+			<div class="h-px w-4 bg-brand/60 hidden md:block"></div>
+			<div class="flex flex-col sm:flex-row sm:items-center gap-3">
 				<p
-					class="text-subtext/80 font-decor text-xs uppercase tracking-widest max-w-3xl leading-relaxed font-bold"
+					class="text-subtext font-decor text-xs uppercase tracking-wide max-w-3xl leading-relaxed font-semibold"
 				>
 					{description}
 				</p>
 				{#if readingTime}
 					<span
-						class="text-subtext/40 font-mono text-xs uppercase tracking-widest font-bold md:border-l md:border-overlay/20 md:pl-3"
+						class="text-subtle font-mono text-xs tracking-wide font-semibold sm:border-l sm:border-overlay/20 sm:pl-3"
 					>
-						{readingTime} min read
+						~{readingTime} min read
 					</span>
 				{/if}
 			</div>

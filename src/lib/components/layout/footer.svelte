@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Component } from 'svelte';
 	import {
-		CopyrightIcon,
 		GithubIcon,
 		InstagramIcon,
 		LinkedinIcon,
@@ -36,25 +35,23 @@
 			icon: InstagramIcon,
 			label: 'Follow on Instagram'
 		},
-		{ href: 'https://bere.al/shettytejas', target: '_blank', icon: ScanFaceIcon, label: 'Follow on BeReal' }
+		{
+			href: 'https://bere.al/shettytejas',
+			target: '_blank',
+			icon: ScanFaceIcon,
+			label: 'Follow on BeReal'
+		}
 	];
 </script>
 
 <footer
-	class="mt-20 py-10 border-t border-overlay/30 select-none flex flex-col md:flex-row justify-between items-center gap-y-8"
+	class="mt-20 py-10 border-t border-overlay/30 select-none flex flex-col sm:flex-row justify-end items-center gap-y-8"
 >
-	<span
-		class="flex items-center gap-x-2 text-xs font-decor font-bold tracking-widest uppercase text-subtle"
-	>
-		<CopyrightIcon size="14" strokeWidth={1.5} />
-		{new Date().getFullYear()} Tejas Shetty
-	</span>
-
 	<div class="flex items-center gap-x-2">
 		{#each footerLinks as link (link.href)}
 			<a
 				href={link.href}
-				rel="external"
+				rel="external noopener noreferrer"
 				target={link.target}
 				class="text-subtle hover:text-brand transition-all hover:-translate-y-1 p-2"
 				aria-label={link.label}
