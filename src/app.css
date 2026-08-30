@@ -190,7 +190,7 @@ article {
 	}
 
 	& a {
-		@apply text-brand decoration-brand/20 hover:decoration-brand font-medium underline underline-offset-4;
+		@apply text-brand decoration-brand/20 hover:decoration-brand font-medium underline decoration-wavy underline-offset-4;
 	}
 
 	& strong {
@@ -215,7 +215,7 @@ article {
 		& li {
 			&::before {
 				content: '>';
-				@apply text-brand inline-block pr-2 font-mono font-bold;
+				@apply text-brand inline-block pr-2 font-mono text-sm font-semibold;
 			}
 		}
 
@@ -228,18 +228,32 @@ article {
 		@apply border-overlay/30 my-10 border-t group-last:hidden;
 	}
 
-	& nav {
-		@apply border-overlay/20 mb-6 rounded-none select-none;
+	& details.toc-details {
+		@apply border-overlay/20 mb-4 select-none;
 
-		& > h4 {
-			@apply text-brand mb-2! font-mono text-sm font-bold tracking-widest uppercase;
+		& > summary {
+			@apply mb-1 cursor-pointer list-none font-mono text-sm font-bold tracking-wider uppercase [&::-webkit-details-marker]:hidden;
+
+			&::before {
+				content: '$';
+				@apply pr-2 text-brand;
+			}
+		}
+
+		&:open {
+			& > summary {
+				@apply text-brand;
+			}
 		}
 
 		& > ul {
+			@apply ml-2;
+
 			& li {
 				@apply m-0;
+
 				& a {
-					@apply text-neutral/80 hover:text-brand font-decor inline text-sm leading-tight font-semibold transition-colors duration-150 md:text-base;
+					@apply text-neutral/80 hover:text-brand font-decor text-sm font-semibold transition-colors duration-150 md:text-base;
 				}
 			}
 		}
