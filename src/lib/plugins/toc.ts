@@ -1,5 +1,5 @@
 import type { Transformer } from 'unified';
-import type { Root, Heading, Html, List } from 'mdast';
+import type { Root, Heading, Html } from 'mdast';
 import remarkToc, { type Options as RemarkTocOptions } from 'remark-toc';
 import visit from 'unist-util-visit';
 

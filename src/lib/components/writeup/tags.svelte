@@ -12,9 +12,9 @@
 {#if tags && tags.length > 0}
 	<div class={cn('flex flex-wrap justify-end-safe gap-2', cls)}>
 		{#each tags as tag (tag)}
-			<span class="tag">
+			<aside class="tag">
 				{tag}
-			</span>
+			</aside>
 		{/each}
 	</div>
 {/if}
