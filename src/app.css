@@ -100,12 +100,12 @@
 
 	/* Theme Mappings */
 	--color-neutral: light-dark(var(--color-latte-text), var(--color-mocha-text));
-	--color-subtext: light-dark(var(--color-latte-subtext-0), var(--color-mocha-subtext-0));
-	--color-subtext-light: light-dark(var(--color-latte-subtext-1), var(--color-mocha-subtext-1));
-	--color-subtle: light-dark(var(--color-latte-overlay-1), var(--color-mocha-overlay-1));
+	--color-subtext: light-dark(var(--color-latte-subtext-1), var(--color-mocha-subtext-0));
+	--color-subtext-light: light-dark(var(--color-latte-subtext-0), var(--color-mocha-subtext-1));
+	--color-subtle: light-dark(var(--color-latte-overlay-2), var(--color-mocha-overlay-1));
 
-	--color-brand: light-dark(var(--color-latte-peach), var(--color-mocha-peach));
-	--color-link: light-dark(var(--color-latte-peach), var(--color-mocha-peach));
+	--color-brand: light-dark(var(--color-latte-red), var(--color-mocha-peach));
+	--color-link: light-dark(var(--color-latte-red), var(--color-mocha-peach));
 	--color-success: light-dark(var(--color-latte-green), var(--color-mocha-green));
 	--color-warning: light-dark(var(--color-latte-yellow), var(--color-mocha-yellow));
 	--color-error: light-dark(var(--color-latte-red), var(--color-mocha-red));
@@ -116,13 +116,11 @@
 
 	--color-surface: light-dark(var(--color-latte-surface-0), var(--color-mocha-surface-0));
 	--color-surface-light: light-dark(var(--color-latte-surface-1), var(--color-mocha-surface-1));
-	--color-surface-lighter: light-dark(var(--color-latte-surface-2), var(--color-mocha-surface-2));
 
 	--color-overlay: light-dark(var(--color-latte-overlay-0), var(--color-mocha-overlay-0));
-	--color-overlay-light: light-dark(var(--color-latte-overlay-1), var(--color-mocha-overlay-1));
-	--color-overlay-lighter: light-dark(var(--color-latte-overlay-2), var(--color-mocha-overlay-2));
 
-	--color-cursor: light-dark(var(--color-latte-rosewater), var(--color-mocha-rosewater));
+	--color-code: light-dark(var(--color-latte-text), var(--color-mocha-maroon));
+	--color-code-block: light-dark(var(--color-latte-text), var(--color-mocha-text));
 	--color-selection-background: light-dark(
 		var(--color-latte-surface-2),
 		var(--color-mocha-surface-2)
@@ -154,7 +152,7 @@ body {
 /* Snappy transitions for interactive elements */
 a,
 button,
-span.tag,
+aside.tag,
 .index-title {
 	@apply transition-all duration-200 ease-out;
 }
@@ -175,77 +173,97 @@ pre {
 }
 
 code {
-	@apply bg-surface-light/30 text-mocha-maroon rounded-none px-1 py-0.5 font-mono text-[0.9em] font-medium;
+	@apply bg-surface-light/30 text-code rounded-none px-1 py-0.5 font-mono text-[0.9em] font-medium;
 }
 
 pre code {
-	@apply text-mocha-text bg-transparent p-0 font-normal;
+	@apply text-code-block bg-transparent p-0 font-normal;
 }
 
 article {
-	@apply space-y-5 text-base leading-[1.7] font-normal tracking-normal md:text-lg;
-
-	& span.tag {
-		@apply bg-based-dark text-subtext border hover:border-brand hover:text-brand cursor-pointer px-2 py-0.5 font-mono text-xs font-medium tracking-wider uppercase transition-colors duration-200;
-	}
-
-	& a {
-		@apply text-brand decoration-brand/20 hover:decoration-brand font-medium underline underline-offset-4;
-	}
-
-	& strong {
-		@apply text-neutral font-bold;
-	}
-
-	& h1 {
-		@apply font-decor text-neutral text-3xl leading-tight font-black tracking-tight md:text-4xl;
-	}
-
-	& h2 {
-		@apply font-decor text-brand border-overlay/30 mb-4 border-b pt-6 pb-2 text-xl font-bold md:text-2xl;
-	}
-
-	& h3 {
-		@apply font-decor text-brand pt-3 text-lg font-bold opacity-90 md:text-xl;
-	}
-
-	& ul {
-		@apply m-0 list-none space-y-0.5 p-0;
-
-		& li {
-			&::before {
-				content: '>';
-				@apply text-brand inline-block pr-2 font-mono font-bold;
-			}
-		}
-
-		& li > ul {
-			@apply mt-2 ml-6 indent-0;
+	& header {
+		& aside.tag {
+			@apply text-subtle hover:text-brand cursor-pointer p-0.5 font-mono text-xs font-medium tracking-wide transition-colors duration-200;
 		}
 	}
 
-	& hr {
-		@apply border-overlay/30 my-10 border-t group-last:hidden;
-	}
+	& main {
+		@apply space-y-5 text-base leading-[1.7] font-normal tracking-normal md:text-lg;
 
-	/* Table of Contents / Nav */
-	& nav {
-		@apply bg-based-dark border-overlay/20 mb-10 space-y-4 rounded-none border-l-4 p-5 select-none;
+		& aside {
+			& details {
+				@apply border-overlay/20 mb-4 select-none;
 
-		& > h4 {
-			@apply font-decor text-brand mb-4! text-sm font-black tracking-widest uppercase;
-		}
+				& > summary {
+					@apply mb-1 cursor-pointer list-none font-mono text-sm font-bold tracking-wider uppercase [&::-webkit-details-marker]:hidden;
 
-		& > ul {
-			& li {
-				& a {
-					@apply text-neutral/80 hover:text-brand font-decor inline text-sm leading-tight font-bold no-underline! transition-colors duration-150 md:text-base;
+					&::before {
+						content: '$';
+						@apply text-brand pr-2;
+					}
+				}
+
+				&:open {
+					& > summary {
+						@apply text-brand;
+					}
+				}
+
+				& > ul {
+					@apply ml-2;
+
+					& li {
+						@apply m-0;
+
+						& a {
+							@apply text-neutral/80 hover:text-brand font-decor text-sm font-semibold transition-colors duration-150 md:text-base;
+						}
+					}
 				}
 			}
+		}
+
+		& a {
+			@apply text-brand decoration-brand/20 hover:decoration-brand font-medium underline decoration-wavy underline-offset-2;
+		}
+
+		& strong {
+			@apply text-neutral font-bold;
+		}
+
+		& h1 {
+			@apply font-decor text-neutral text-3xl leading-tight font-black tracking-tight md:text-4xl;
+		}
+
+		& h2 {
+			@apply font-decor text-brand border-overlay/30 mb-4 border-b pt-6 pb-2 text-xl font-bold md:text-2xl;
+		}
+
+		& h3 {
+			@apply font-decor text-brand pt-3 text-lg font-bold opacity-90 md:text-xl;
+		}
+
+		& ul {
+			@apply m-0 list-none space-y-0.5 p-0;
+
+			& li {
+				&::before {
+					content: '>';
+					@apply text-brand inline-block pr-2 font-mono text-sm font-semibold;
+				}
+			}
+
+			& li > ul {
+				@apply mt-2 ml-6 indent-0;
+			}
+		}
+
+		& hr {
+			@apply border-overlay/30 my-10 border-t group-last:hidden;
 		}
 	}
 
 	& footer {
-		@apply text-subtle mt-16 flex w-full justify-end font-mono text-xs tracking-widest uppercase opacity-60;
+		@apply text-subtext mt-16 flex w-full justify-end font-mono text-xs tracking-widest uppercase;
 	}
 }

@@ -36,13 +36,14 @@
 	<meta property="og:image" content={new URL(asset('/brand/og-logo.png'), page.url.origin).href} />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:creator" content="@_shettytejas_" />
+	<meta name="twitter:creator" content="@itstejas_fyi" />
 	<meta name="twitter:title" content="Tejas Shetty" />
 	<meta
 		name="twitter:description"
 		content="Software engineer by trade, curious by nature. Writing about building robust systems and navigating the messy process of personal growth."
 	/>
 	<meta name="twitter:image" content={new URL(asset('/brand/og-logo.png'), page.url.origin).href} />
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href={new URL('feed.xml', page.url.origin).href} />
 </svelte:head>
 
 <div class="max-w-5xl xl:max-w-6xl mx-6 md:mx-8 lg:mx-auto mb-10 mt-8 md:mt-20 lg:mt-32">

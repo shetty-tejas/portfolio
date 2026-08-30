@@ -1,39 +1,39 @@
 <script lang="ts">
 	import type { PostMetadata } from '$lib/content/loader';
+
+	import { resolve } from '$app/paths';
 	import { formatDate } from '$lib/utils';
 	import Tags from './tags.svelte';
 
 	interface Props {
-		slug: string;
 		metadata: PostMetadata;
-		basePath: string;
+		route: '/writings/[slug]' | '/series/[slug]';
+		slug: string;
 	}
 
-	const { slug, metadata, basePath }: Props = $props();
+	const { metadata, route, slug }: Props = $props();
 </script>
 
-<div class="group relative flex flex-col gap-y-2">
+<section class="group relative flex flex-col gap-y-2">
 	<!-- Compact Date Header -->
 	<div class="flex items-center gap-x-2">
-		<div class="h-px w-4 bg-brand/30"></div>
+		<div class="h-px w-4 bg-brand/60"></div>
 		<div class="flex items-center gap-x-2">
-			<span
-				class="font-mono text-xs uppercase tracking-[0.2em] text-subtext/50 font-bold"
-			>
-				{formatDate(metadata.publishedAt || '', false)}
+			<span class="font-mono text-xs uppercase tracking-wide text-subtext font-semibold">
+				{formatDate(metadata.publishedAt)}
 			</span>
 			{#if metadata.readingTime}
 				<span
-					class="font-mono text-xs uppercase tracking-[0.2em] text-subtext/40 font-bold pl-2 md:border-l md:border-overlay/20"
+					class="font-mono text-xs tracking-wide text-subtle font-semibold pl-2 md:border-l md:border-overlay/20"
 				>
-					{metadata.readingTime} min read
+					~{metadata.readingTime} min read
 				</span>
 			{/if}
 		</div>
 	</div>
 
 	<div class="space-y-2">
-		<a href="/{basePath}/{slug}" class="no-underline! block">
+		<a href={resolve(route, { slug })} class="no-underline! block">
 			<h2
 				class="m-0! p-0! border-none! leading-tight font-black text-xl md:text-3xl tracking-tighter transition-colors text-neutral! hover:text-brand!"
 			>
@@ -46,4 +46,4 @@
 
 		<Tags tags={metadata.tags} />
 	</div>
-</div>
+</section>

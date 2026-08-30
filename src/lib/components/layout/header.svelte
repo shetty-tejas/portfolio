@@ -9,14 +9,18 @@
 </script>
 
 <header class="flex justify-between items-center mb-8 pb-4 border-b border-overlay/30 select-none">
-	<div class="flex flex-col md:flex-row md:items-baseline md:gap-x-4">
-		<h1 class="font-mono font-bold text-xs tracking-[0.2em] uppercase text-subtext">
-			./portfolio
+	<div class="flex flex-row md:items-baseline gap-x-2 text-xs font-mono">
+		<h1 class="font-bold text-subtext">
+			<span class="text-brand">$&nbsp;</span>./portfolio
 		</h1>
-		<span class="font-mono text-xs uppercase tracking-widest text-subtext/40 font-bold hidden md:block">
-			Last Updated: {buildDate}
+
+		<span class="text-subtle font-semibold hidden sm:block">
+			--build-version {buildDate}
+		</span>
+		<span class="text-subtle font-semibold block sm:hidden">
+			-v {buildDate}
 		</span>
 	</div>
-	
+
 	<ThemeToggle />
 </header>

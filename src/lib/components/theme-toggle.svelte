@@ -14,7 +14,7 @@
 	type="button"
 	onclick={() => theme.toggle()}
 	class={cn(
-		'h-11 w-11 border border-surface bg-based hover:bg-surface-light/40 transition-all duration-300 shadow-[2px_2px_0_var(--color-surface)] hover:scale-102 active:scale-98 hover:shadow-[3px_3px_0_var(--color-surface)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] cursor-pointer',
+		'h-11 w-11 border border-surface bg-based hover:bg-surface-light/40 transition-all duration-300 shadow-[2px_2px_0_var(--color-surface)] hover:scale-[1.02] active:scale-[0.98] hover:shadow-[3px_3px_0_var(--color-surface)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] cursor-pointer',
 		cls
 	)}
 	aria-label="Toggle theme"
