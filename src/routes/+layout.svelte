@@ -54,9 +54,9 @@
 		<div class="flex-1 flex flex-col pt-2 min-w-0">
 			<Header {buildDate} />
 
-			<div class="flex-1">
+			<main class="flex-1">
 				{@render children()}
-			</div>
+			</main>
 
 			<Footer />
 		</div>

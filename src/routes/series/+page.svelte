@@ -14,10 +14,10 @@
 			message="Multi-part investigations are still in the lab. Check back soon for the results."
 		/>
 	{:else}
-		<div class="mt-8 space-y-12">
+		<main class="mt-8 space-y-12">
 			{#each data.series as series (series.slug)}
 				<PostPreview route="/series/[slug]" slug={series.slug} metadata={series.metadata} />
 			{/each}
-		</div>
+		</main>
 	{/if}
 </article>

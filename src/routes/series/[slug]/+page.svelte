@@ -17,7 +17,9 @@
 		readingTime={data.post.metadata.readingTime}
 	/>
 
-	<data.post.component></data.post.component>
+	<main>
+		<data.post.component></data.post.component>
+	</main>
 
 	<Footer publishedAt={data.post.metadata.publishedAt} />
 </article>

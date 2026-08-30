@@ -1,5 +1,5 @@
 import type { Transformer } from 'unified';
-import type { Root, Heading, Html } from 'mdast';
+import type { Root, Heading, Html, List } from 'mdast';
 import remarkToc, { type Options as RemarkTocOptions } from 'remark-toc';
 import visit from 'unist-util-visit';
 
@@ -26,16 +26,24 @@ export default function (options: TocOptions = {}): Transformer<Root> {
 				const nextNode = parent.children[index + 1];
 
 				if (nextNode && nextNode.type === 'list') {
+					const listNode = nextNode as List;
+
+					listNode.data = listNode.data || {};
+					listNode.data.hProperties = {
+						...(listNode.data.hProperties as Record<string, unknown>),
+						'aria-hidden': 'true'
+					};
+
 					const openTag: Html = {
 						type: 'html',
-						value: `<nav><details class="toc-details"><summary class="toc-summary">${summaryText}</summary>`
+						value: `<aside><details><summary>${summaryText}</summary>`
 					};
 					const closeTag: Html = {
 						type: 'html',
-						value: '</details></nav>'
+						value: '</details></aside>'
 					};
 
-					parent.children.splice(index, 2, openTag, nextNode, closeTag);
+					parent.children.splice(index, 2, openTag, listNode, closeTag);
 				}
 			}
 		});

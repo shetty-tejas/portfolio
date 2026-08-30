@@ -14,7 +14,7 @@
 	const { metadata, route, slug }: Props = $props();
 </script>
 
-<div class="group relative flex flex-col gap-y-2">
+<section class="group relative flex flex-col gap-y-2">
 	<!-- Compact Date Header -->
 	<div class="flex items-center gap-x-2">
 		<div class="h-px w-4 bg-brand/60"></div>
@@ -46,4 +46,4 @@
 
 		<Tags tags={metadata.tags} />
 	</div>
-</div>
+</section>

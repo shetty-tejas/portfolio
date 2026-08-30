@@ -14,10 +14,10 @@
 			message="The ink hasn't dried yet. Check back soon for thoughts on engineering and life."
 		/>
 	{:else}
-		<div class="mt-8 space-y-12">
+		<main class="mt-8 space-y-12">
 			{#each data.writings as writing (writing.slug)}
 				<PostPreview route="/writings/[slug]" slug={writing.slug} metadata={writing.metadata} />
 			{/each}
-		</div>
+		</main>
 	{/if}
 </article>
