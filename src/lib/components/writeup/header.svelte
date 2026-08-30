@@ -22,7 +22,7 @@
 	<meta name="twitter:description" content={description} />
 </svelte:head>
 
-<div class={cn('space-y-4 mb-12! pb-8 border-b-2 border-overlay/20', cls)}>
+<header class={cn('space-y-4 mb-12! pb-8 border-b-2 border-overlay/20', cls)}>
 	<div class="space-y-3">
 		<h1 class="leading-[1.1] tracking-tighter text-neutral font-black text-3xl md:text-4xl">
 			{title}
@@ -49,4 +49,4 @@
 	{#if tags && tags.length > 0}
 		<Tags {tags} />
 	{/if}
-</div>
+</header>

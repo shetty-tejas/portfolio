@@ -6,7 +6,6 @@ import remarkGfm from 'remark-gfm';
 import remarkHeadingId from 'remark-heading-id';
 
 import calculateReadingTime from './src/lib/plugins/reading-time.ts';
-import buildExcerpt from './src/lib/plugins/excerpt.ts';
 import buildToc from './src/lib/plugins/toc.ts';
 
 const config = {
@@ -19,7 +18,6 @@ const config = {
 				[remarkHeadingId, { defaults: true }],
 				[buildToc, { heading: '(table[ -]of[ -])?contents?|toc' }],
 				calculateReadingTime,
-				buildExcerpt
 			]
 		})
 	],
