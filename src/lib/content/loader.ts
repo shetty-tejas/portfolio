@@ -29,6 +29,9 @@ const globs = {
 			eager: true
 		})
 	},
+	markup: {
+		// RESEARCH: Extract plain markup for rss feed? This way we can avoid what we don't need.
+	},
 	components: {
 		writings: import.meta.glob<Component>('/src/lib/content/writings/*.md', {
 			import: 'default'
