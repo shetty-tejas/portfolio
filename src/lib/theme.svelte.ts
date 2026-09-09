@@ -10,24 +10,25 @@ function createTheme() {
 	};
 
 	let theme = $state<Theme>('system');
+
 	if (browser) {
-		theme = (localStorage.getItem('theme') || 'system') as Theme;
-		if (!nextState[theme]) {
-			theme = 'system';
+		const stored = (localStorage.getItem('theme') || 'system') as Theme;
+		if (nextState[stored]) {
+			theme = stored;
 		}
-
-		$effect.root(() => {
-			$effect(() => {
-				if (theme === 'system') {
-					document.documentElement.removeAttribute('data-theme');
-				} else {
-					document.documentElement.setAttribute('data-theme', theme);
-				}
-
-				localStorage.setItem('theme', theme);
-			});
-		});
 	}
+
+	$effect.root(() => {
+		$effect(() => {
+			if (theme === 'system') {
+				document.documentElement.removeAttribute('data-theme');
+			} else {
+				document.documentElement.setAttribute('data-theme', theme);
+			}
+
+			localStorage.setItem('theme', theme);
+		});
+	});
 
 	return {
 		get current() {
