@@ -10,9 +10,6 @@
 	"placement": {
 		"mode": "smart"
 	},
-	"vars": {
-		"ORIGIN": "https://itstejas.fyi"
-	},
 	"cache": {
 		"enabled": true
 	}
