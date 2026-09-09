@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
+	import Signature from './signature.svelte';
 
 	interface Props {
 		publishedAt: string;
@@ -14,4 +15,8 @@
 			{formatDate(publishedAt)}
 		</aside>
 	</time>
+
+	<aside aria-label="Tejas Shetty">
+		<Signature />
+	</aside>
 </footer>

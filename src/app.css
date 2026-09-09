@@ -262,6 +262,6 @@ article {
 	}
 
 	& footer {
-		@apply text-subtext mt-16 flex w-full justify-end font-mono text-xs tracking-widest uppercase;
+		@apply text-subtext mt-16 flex flex-col gap-y-6 w-full items-end font-mono text-xs sm:text-sm tracking-widest;
 	}
 }

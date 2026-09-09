@@ -3,14 +3,13 @@ import { browser } from '$app/environment';
 export type Theme = 'light' | 'dark' | 'system';
 
 function createTheme() {
-	const states: Record<Theme, Theme> = {
+	const nextState: Record<Theme, Theme> = {
 		system: 'light',
 		light: 'dark',
 		dark: 'system'
 	};
 
 	let theme = $state<Theme>('system');
-
 	if (browser) {
 		theme = (localStorage.getItem('theme') || 'system') as Theme;
 
@@ -32,7 +31,7 @@ function createTheme() {
 			return theme;
 		},
 		toggle() {
-			theme = states[theme];
+			theme = nextState[theme];
 		}
 	};
 }
