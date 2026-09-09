@@ -28,11 +28,11 @@ export default function (options: TocOptions = {}): Transformer<Root> {
 				if (nextNode && nextNode.type === 'list') {
 					const openTag: Html = {
 						type: 'html',
-						value: `<aside><details><summary>${summaryText}</summary>`
+						value: `<nav><details><summary>${summaryText}</summary>`
 					};
 					const closeTag: Html = {
 						type: 'html',
-						value: '</details></aside>'
+						value: '</details></nav>'
 					};
 
 					parent.children.splice(index, 2, openTag, nextNode, closeTag);

@@ -1,12 +1,6 @@
 <script lang="ts">
 	import type { Component } from 'svelte';
-	import {
-		GithubIcon,
-		InstagramIcon,
-		LinkedinIcon,
-		MailIcon,
-		ScanFaceIcon
-	} from '@lucide/svelte';
+	import { GithubIcon, InstagramIcon, LinkedinIcon, MailIcon, ScanFaceIcon } from '@lucide/svelte';
 
 	type FooterLink = {
 		href: string;
@@ -45,7 +39,7 @@
 </script>
 
 <footer
-	class="mt-20 py-10 border-t border-overlay/30 select-none flex flex-col sm:flex-row justify-end items-center gap-y-8"
+	class="mt-20 py-10 border-t border-overlay/30 select-none flex justify-end items-center gap-y-8"
 >
 	<div class="flex items-center gap-x-2">
 		{#each footerLinks as link (link.href)}

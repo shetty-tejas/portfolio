@@ -10,7 +10,7 @@
 
 <footer>
 	<time datetime={publishedAt}>
-		<aside>
+		<aside class="text-subtext-light font-semibold">
 			{formatDate(publishedAt)}
 		</aside>
 	</time>

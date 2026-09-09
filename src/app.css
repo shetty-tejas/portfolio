@@ -181,21 +181,19 @@ pre code {
 }
 
 article {
-	& header {
-		& aside.tag {
-			@apply text-subtle hover:text-brand cursor-pointer p-0.5 font-mono text-xs font-medium tracking-wide transition-colors duration-200;
-		}
+	& aside.tag {
+		@apply text-subtle hover:text-brand cursor-pointer p-0.5 font-mono text-xs font-medium tracking-wide transition-colors duration-200;
 	}
 
 	& main {
-		@apply space-y-5 text-base leading-[1.7] font-normal tracking-normal md:text-lg;
+		@apply space-y-5 leading-relaxed tracking-wide md:text-lg;
 
-		& aside {
+		& nav {
 			& details {
 				@apply border-overlay/20 mb-4 select-none;
 
 				& > summary {
-					@apply mb-1 cursor-pointer list-none font-mono text-sm font-bold tracking-wider uppercase [&::-webkit-details-marker]:hidden;
+					@apply hover:text-brand mb-1 cursor-pointer list-none font-mono text-sm font-bold tracking-wider uppercase [&::-webkit-details-marker]:hidden;
 
 					&::before {
 						content: '$';
@@ -224,7 +222,7 @@ article {
 		}
 
 		& a {
-			@apply text-brand decoration-brand/20 hover:decoration-brand font-medium underline decoration-wavy underline-offset-2;
+			@apply text-brand decoration-brand/35 hover:decoration-brand font-medium underline decoration-wavy underline-offset-2;
 		}
 
 		& strong {

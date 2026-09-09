@@ -1,19 +1,27 @@
 import { browser } from '$app/environment';
 
-export type Theme = 'light' | 'dark';
+export type Theme = 'light' | 'dark' | 'system';
 
 function createTheme() {
-	let theme = $state<Theme>('dark');
+	const states: Record<Theme, Theme> = {
+		system: 'light',
+		light: 'dark',
+		dark: 'system'
+	};
+
+	let theme = $state<Theme>('system');
 
 	if (browser) {
-		const savedTheme = localStorage.getItem('theme') as Theme | null;
-		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-		theme = savedTheme || (prefersDark ? 'dark' : 'light');
+		theme = (localStorage.getItem('theme') || 'system') as Theme;
 
 		$effect.root(() => {
 			$effect(() => {
-				document.documentElement.setAttribute('data-theme', theme);
+				if (theme === 'system') {
+					document.documentElement.removeAttribute('data-theme');
+				} else {
+					document.documentElement.setAttribute('data-theme', theme);
+				}
+
 				localStorage.setItem('theme', theme);
 			});
 		});
@@ -23,8 +31,8 @@ function createTheme() {
 		get current() {
 			return theme;
 		},
-		toggle: () => {
-			theme = theme === 'light' ? 'dark' : 'light';
+		toggle() {
+			theme = states[theme];
 		}
 	};
 }
