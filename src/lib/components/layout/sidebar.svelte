@@ -4,6 +4,7 @@
 	import type { Pathname, ResolvedPathname } from '$app/types';
 	import { cn } from '$lib/utils';
 	import Logo from '$lib/components/layout/logo.svelte';
+	import ThemeToggle from '$lib/components/theme-toggle.svelte';
 
 	type NavLink = {
 		label: string;
@@ -27,20 +28,18 @@
 
 <div class="md:w-64 shrink-0 md:border-r border-overlay/30 md:pr-12">
 	<aside class="space-y-12 md:sticky md:top-20 select-none">
-		<div class="flex md:flex-col max-md:items-center gap-x-4 gap-y-6">
+		<div class="flex max-md:items-center items-center gap-x-4 gap-y-4">
 			<a
 				href={resolve('/')}
-				class="group w-fit block transition-transform hover:scale-102 active:scale-98 active:translate-x-1 active:translate-y-1"
+				class="group w-fit block transition-transform hover:scale-[1.02] active:scale-[0.98] active:translate-x-1 active:translate-y-1"
 			>
 				<div
-					class="size-12 md:size-16 rounded-none border-2 border-neutral shadow-[4px_4px_0_var(--color-surface)] group-hover:shadow-[6px_6px_0_var(--color-surface)] group-active:shadow-none transition-all duration-300 overflow-hidden"
+					class="size-12 rounded-none border-2 border-neutral shadow-[4px_4px_0_var(--color-surface-light)] group-hover:shadow-[6px_6px_0_var(--color-surface)] group-active:shadow-none transition-all duration-300 overflow-hidden"
 				>
 					<Logo />
 				</div>
 			</a>
-			<span class="font-decor font-black text-xl tracking-tight text-neutral block leading-none">
-				Tejas Shetty
-			</span>
+			<ThemeToggle class="ml-auto" />
 		</div>
 
 		<nav
@@ -57,18 +56,18 @@
 
 {#snippet navItem(link: NavLink)}
 	{@const isActive = isNavLinkActive(link)}
-	<div class="flex items-center gap-x-3 group">
+	<div class="flex items-center group">
 		<div
 			class={cn(
 				'h-px transition-all duration-300 shrink-0',
-				isActive ? 'w-4 bg-brand' : 'w-0 bg-transparent group-hover:w-2 group-hover:bg-subtle/30'
+				isActive ? 'w-4 bg-brand mr-2' : 'w-0 bg-brand/60 group-hover:w-2 group-hover:mr-2'
 			)}
 		></div>
 		<a
 			href={resolve(link.href)}
 			class={cn(
-				'py-2 transition-all duration-200 uppercase tracking-widest font-bold block w-full',
-				isActive ? 'text-neutral' : 'text-subtle hover:text-neutral'
+				'py-2 transition-all duration-200 uppercase tracking-wider font-bold block w-full',
+				isActive ? 'text-neutral' : 'text-subtle hover:text-subtext-light'
 			)}
 		>
 			{link.label}

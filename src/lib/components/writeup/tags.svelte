@@ -10,7 +10,7 @@
 </script>
 
 {#if tags && tags.length > 0}
-	<div class={cn('flex flex-wrap gap-2', cls)}>
+	<div class={cn('flex flex-wrap justify-end-safe gap-2', cls)}>
 		{#each tags as tag (tag)}
 			<span class="tag">
 				{tag}

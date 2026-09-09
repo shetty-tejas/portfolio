@@ -1,10 +1,10 @@
 ---
 title: Wanna know me more? 🤓
 description: I build software that works, explore ideas that don’t (yet), and enjoy the journey in between.
-publishedAt: 2025/08/22
+publishedAt: 2025-08-22
 ---
 
-<p class="text-sm text-subtle">TL;DR? Download my resume <a href="#">here</a>.</p>
+<p class="text-sm text-subtext">TL;DR? Download my resume <a href="#">here</a>.</p>
 
 I’m a **Software Engineer with 5+ years of experience** building secure, scalable, and efficient web applications.
 I thrive in remote environments, value clear communication, and enjoy collaborating to turn ideas into user-focused products that actually matter.
@@ -24,7 +24,7 @@ I thrive in remote environments, value clear communication, and enjoy collaborat
 
 <div class="space-y-0.5">
   <h3>Engineer @ Sage</h3>
-  <p class="text-subtle text-sm">Remote | May 2022 – Present</p>
+  <p class="text-subtext text-sm">Remote | May 2022 – Present</p>
 </div>
 
 - Architected and built the **E-Invoicing Portal** with modular engines for validation, processing, and compliance of e-invoicing registrations, designed for multi-country extensibility.
@@ -36,7 +36,7 @@ I thrive in remote environments, value clear communication, and enjoy collaborat
 
 <div class="space-y-0.5">
   <h3>Software Engineer @ Capgemini</h3>
-  <p class="text-subtle text-sm">Remote | October 2020 – April 2022</p>
+  <p class="text-subtext text-sm">Remote | October 2020 – April 2022</p>
 </div>
 
 - **Strengthened security** for BNP Paribas Cardif by rapidly identifying and patching critical vulnerabilities.
@@ -50,12 +50,12 @@ I thrive in remote environments, value clear communication, and enjoy collaborat
 
 <div class="space-y-0.5">
   <h3>Master Of Computer Applications</h3>
-  <p class="text-subtle text-sm">Distance Learning, University of Mysore, Mysuru | July 2021 – March 2024 | 8.45 CGPA</p>
+  <p class="text-subtext text-sm">Distance Learning, University of Mysore, Mysuru | July 2021 – March 2024 | 8.45 CGPA</p>
 </div>
 
 <div class="space-y-0.5">
   <h3>Bachelor of Science in Computer Science</h3>
-  <p class="text-subtle text-sm">B. K. Birla College, Kalyan | June 2017 – April 2020 | 9.16 CGPA</p>
+  <p class="text-subtext text-sm">B. K. Birla College, Kalyan | June 2017 – April 2020 | 9.16 CGPA</p>
 </div>
 
 - Published a research paper titled [Human-Machine Communication using Natural Languages](https://ijesc.org/upload/42a635e4eedd8dec9bf45498688096eb.Human%20-%20Machine%20Communication%20using%20Natural%20Languages.pdf) in the International Journal of Engineering Science and Computing, November 2019.

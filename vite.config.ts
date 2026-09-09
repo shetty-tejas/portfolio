@@ -5,6 +5,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	define: {
-		__BUILD_DATE__: JSON.stringify(new Date().toLocaleDateString('en-GB'))
+		__BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10).replaceAll('-', '.'))
 	}
 });

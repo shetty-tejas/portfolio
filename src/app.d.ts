@@ -11,6 +11,7 @@ declare global {
 			title: string;
 			description: string;
 			publishedAt: string;
+			readingTime: number;
 
 			chapter?: Chapter;
 		}

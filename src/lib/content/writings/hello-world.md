@@ -1,18 +1,18 @@
 ---
 title: Hello, World! 🚀
 description: Welcoming my little portfolio to the world.
-publishedAt: 2025/09/19
+publishedAt: 2025-09-19
 tags:
   - announcement
   - engineering
   - sveltekit
 ---
 
-#### Table Of Contents
+#### Table of Contents
 
-## Oh well, another portfolio in the sea...
+## Oh Well, Another Portfolio in the Sea…
 
-You might be wondering why I created this portfolio... Well, maybe not... But I'll still talk about it!
+You might be wondering why I created this portfolio… Well, maybe not… But I'll still talk about it!
 
 This portfolio was initially going to be a simple web page, serving as a hosted resume for me to share.
 I initially thought that a simple HTML file, some sleek CSS styling, and no JavaScript, would be sufficient for showcasing my resume.
@@ -26,7 +26,7 @@ leaving the company, now focusing on different open-source projects, including [
 I was immediately impressed by his website design, and wanted something similar (sorry Mitchell!).
 Additionally, I have always wanted to write blogs about topics that interest me, so this seemed like a good source of inspiration.
 
-## So, how is this one made?
+## So, How Is This One Made?
 
 Well, this one was built on top of [SvelteKit](https://svelte.dev/docs/kit/introduction) and [MDSVEX](https://mdsvex.pngwn.io/).
 I absolutely adore SvelteKit due to its ease of development and management, its user-friendly nature (developer happiness++),
@@ -47,13 +47,13 @@ Of course, the template concept originated from Mitchell's blog (once again, sor
 
 This portfolio is entirely open-source by the way, so you can check it out [here](https://github.com/shetty-tejas/portfolio)!
 
-## What can I expect here?
+## What Can I Expect Here?
 
 I'm glad you asked! Since the start of this year, I have been diving deeper into computer science, systems engineering, and system design.
 My goal with this portfolio is not only to showcase my resume, but also to share my learnings, experiences, and announcements (if any).
 Essentially, giving back to the internet as much as I have gained from it!
 
-## Cool... Any final words?
+## Cool… Any Final Words?
 
 I hope you have as much fun exploring this website as I have had in creating and maintaining it!
 Cheers, and I look forward to connecting with you soon. My socials are open for interaction, and you can find them below.

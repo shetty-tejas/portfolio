@@ -6,7 +6,6 @@
 	import type { Snippet } from 'svelte';
 	import { page } from '$app/state';
 	import Sidebar from '$lib/components/layout/sidebar.svelte';
-	import Header from '$lib/components/layout/header.svelte';
 	import Footer from '$lib/components/layout/footer.svelte';
 	import { asset } from '$app/paths';
 
@@ -15,9 +14,6 @@
 	}
 
 	let { children }: Props = $props();
-
-	// @ts-expect-error - defined in vite.config.ts
-	const buildDate = __BUILD_DATE__;
 </script>
 
 <svelte:head>
@@ -36,13 +32,19 @@
 	<meta property="og:image" content={new URL(asset('/brand/og-logo.png'), page.url.origin).href} />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:creator" content="@_shettytejas_" />
+	<meta name="twitter:creator" content="@itstejas_fyi" />
 	<meta name="twitter:title" content="Tejas Shetty" />
 	<meta
 		name="twitter:description"
 		content="Software engineer by trade, curious by nature. Writing about building robust systems and navigating the messy process of personal growth."
 	/>
 	<meta name="twitter:image" content={new URL(asset('/brand/og-logo.png'), page.url.origin).href} />
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title="RSS Feed"
+		href={new URL('feed.xml', page.url.origin).href}
+	/>
 </svelte:head>
 
 <div class="max-w-5xl xl:max-w-6xl mx-6 md:mx-8 lg:mx-auto mb-10 mt-8 md:mt-20 lg:mt-32">
@@ -51,8 +53,6 @@
 
 		<!-- Main Content -->
 		<div class="flex-1 flex flex-col pt-2 min-w-0">
-			<Header {buildDate} />
-
 			<main class="flex-1">
 				{@render children()}
 			</main>

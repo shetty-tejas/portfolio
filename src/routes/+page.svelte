@@ -9,7 +9,9 @@
 <article>
 	<Header {title} {description} />
 
-	<About />
+	<main>
+		<About />
+	</main>
 
 	<Footer {publishedAt} />
 </article>
