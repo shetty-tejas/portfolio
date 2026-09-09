@@ -11,6 +11,6 @@
 		"mode": "smart"
 	},
 	"cache": {
-		"enabled": true
+		"enabled": false
 	}
 }
