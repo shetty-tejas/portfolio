@@ -12,6 +12,9 @@ function createTheme() {
 	let theme = $state<Theme>('system');
 	if (browser) {
 		theme = (localStorage.getItem('theme') || 'system') as Theme;
+		if (!nextState[theme]) {
+			theme = 'system';
+		}
 
 		$effect.root(() => {
 			$effect(() => {

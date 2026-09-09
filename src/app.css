@@ -152,7 +152,7 @@ body {
 /* Snappy transitions for interactive elements */
 a,
 button,
-aside.tag,
+span.tag,
 .index-title {
 	@apply transition-all duration-200 ease-out;
 }
@@ -181,7 +181,7 @@ pre code {
 }
 
 article {
-	& aside.tag {
+	& span.tag {
 		@apply text-subtle hover:text-brand cursor-pointer p-0.5 font-mono text-xs font-medium tracking-wide transition-colors duration-200;
 	}
 
@@ -262,6 +262,6 @@ article {
 	}
 
 	& footer {
-		@apply text-subtext mt-16 flex flex-col gap-y-6 w-full items-end font-mono text-xs sm:text-sm tracking-widest;
+		@apply text-subtext mt-16 flex w-full flex-col items-end gap-y-6 font-mono text-xs tracking-widest sm:text-sm;
 	}
 }

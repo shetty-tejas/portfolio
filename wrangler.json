@@ -1,12 +1,19 @@
 {
+	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "itstejas",
 	"main": ".svelte-kit/cloudflare/_worker.js",
-	"compatibility_date": "2025-08-21",
+	"compatibility_date": "2026-09-09",
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
 	},
 	"placement": {
 		"mode": "smart"
+	},
+	"vars": {
+		"ORIGIN": "https://itstejas.fyi"
+	},
+	"cache": {
+		"enabled": true
 	}
 }
